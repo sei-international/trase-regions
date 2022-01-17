@@ -28,7 +28,7 @@ For example:
     └── etc.
 ```
 
-Clients can consume the data committed into this repo by following the link to the raw data, example:
+Clients can consume the data committed into this repo by following the link to the raw data, example: https://raw.githubusercontent.com/sei-international/trase-regions/main/data/ar/1.geojson
 
 ## Prerequisites
 

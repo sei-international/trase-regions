@@ -1,5 +1,6 @@
 from pathlib import Path
 from argparse import ArgumentParser
+import json
 
 from helpers.yaml import parse_yaml
 from helpers.json import save_geojson_to_file, save_topojson_to_file
@@ -7,14 +8,14 @@ from helpers.topo import load_gdf_from_file, gdf_to_topojson
 from helpers.db import run_sql_return_df
 from helpers.queries import regions_dictionary_query, generate_geojson_query
 from helpers.constants import (
+    OUT_FOLDER,
     GEOJSON_EXTENSION,
     TOPOJSON_EXTENSION,
     COUNTRY_CODE_COL,
     COUNTRY_NAME_COL,
     LEVEL_COL,
+    REPO_FILES_URL,
 )
-
-OUT_FOLDER = 'data'
 
 parser = ArgumentParser()
 parser.add_argument("--country_codes", type=str, nargs="+", required=False,
@@ -49,9 +50,13 @@ def extract_and_save_data(row):
 
 def save_regions_metadata(df):
     df_tmp = df
-    df_tmp["path_geojson"] = OUT_FOLDER + "/" + df[COUNTRY_CODE_COL].str.lower() + "/" + df[LEVEL_COL].astype(str) + f".{GEOJSON_EXTENSION}"
-    df_tmp["path_topojson"] = OUT_FOLDER + "/" + df[COUNTRY_CODE_COL].str.lower() + "/" + df[LEVEL_COL].astype(str) + f".{TOPOJSON_EXTENSION}"
-    df_tmp.to_json(f"{OUT_FOLDER}/metadata.json", orient="records", indent=4)
+    base_path = f"{REPO_FILES_URL}/{OUT_FOLDER}/"
+    df_tmp["path_geojson"] = base_path + df[COUNTRY_CODE_COL].str.lower() + "/" + df[LEVEL_COL].astype(str) + f".{GEOJSON_EXTENSION}"
+    df_tmp["path_topojson"] = base_path + df[COUNTRY_CODE_COL].str.lower() + "/" + df[LEVEL_COL].astype(str) + f".{TOPOJSON_EXTENSION}"
+    # need to do the following so pandas won't escape forward slashes in URLs
+    out = df_tmp.to_json(orient="records")
+    with open(f"{OUT_FOLDER}/metadata.json", "w") as f:
+        json.dump(json.loads(out), f, ensure_ascii=False, indent=4)
 
 
 if __name__ == "__main__":
