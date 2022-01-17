@@ -2,6 +2,7 @@ from helpers.constants import (
     COUNTRY_CODE_COL,
     COUNTRY_NAME_COL,
     LEVEL_COL,
+    SIMPLIFY_DEGREES,
 )
 
 def regions_dictionary_query():
@@ -32,19 +33,21 @@ def generate_geojson_query(country_name, level):
         'type',       'Feature',
         'id',         trase_id,
         'properties', to_jsonb( r.* ) - 'geometry',
-        'geometry',   ST_AsGeoJSON(ST_Simplify(geometry, 0.001), 4)::jsonb
+        'geometry',   ST_AsGeoJSON(ST_Simplify(geometry, {SIMPLIFY_DEGREES}), 4)::jsonb
         ) AS json
     FROM (
-      SELECT
-        name,
-        trase_id,
-        biome,
-        geometry,
-        region_type,
-        "level",
-        country
-    FROM views.regions
-    ) r
-    WHERE "level" = '{level}' AND country = '{country_name.replace("'", "''")}'
+        SELECT
+            name,
+            trase_id,
+            biome,
+            geometry,
+            region_type,
+            "level",
+            country
+        FROM views.regions
+        WHERE geometry IS NOT NULL
+            AND "level" = '{level}'
+            AND country = '{country_name.replace("'", "''")}'
+        ) r
     ) as t
     """

@@ -63,3 +63,7 @@ To run for specific regions, pass the 2-letter country codes as arguments (e.g. 
 ```bash
 poetry run python extract_trase_regions --country_codes CI BO
 ```
+
+## To-do
+
+- [ ] Use Github Actions to run automatically
