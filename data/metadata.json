@@ -18,6 +18,15 @@
         "path_topojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main//data/ar/2.topo.json"
     },
     {
+        "country": "ARGENTINA",
+        "country_code": "AR",
+        "level": 3,
+        "region_type": "DEPARTMENT",
+        "regions_count": 527,
+        "path_geojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main//data/ar/3.geojson",
+        "path_topojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main//data/ar/3.topo.json"
+    },
+    {
         "country": "BOLIVIA",
         "country_code": "BO",
         "level": 1,
