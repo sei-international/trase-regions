@@ -7,6 +7,7 @@ from helpers.json import save_geojson_to_file, save_topojson_to_file
 from helpers.topo import load_gdf_from_file, gdf_to_topojson
 from helpers.db import run_sql_return_df
 from helpers.queries import regions_dictionary_query, generate_geojson_query
+from helpers.combine_data import combine_data
 from helpers.constants import (
     OUT_FOLDER,
     GEOJSON_EXTENSION,
@@ -60,6 +61,7 @@ def save_regions_metadata(df):
 
 
 if __name__ == "__main__":
+    print("---> getting metadata for all regions")
     countries_data = run_sql_return_df(regions_dictionary_query())
     save_regions_metadata(countries_data)
     if args.country_codes:
@@ -70,4 +72,8 @@ if __name__ == "__main__":
             extract_and_save_data(row)
         except Exception as e:
             print(f"---> error: {e}")
+    levels = countries_data.level.unique()
+    print(f"---> combining data for each level into a single file")
+    for level in levels:
+        combine_data(level, OUT_FOLDER)
     print("---> all done.")

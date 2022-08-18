@@ -11,6 +11,10 @@ The data is saved into the `data` folder, in the following structure:
     ├── [2-letter country code]
         ├── [region_level.geojson]
         └── [region_level.topo.json]
+    └── all  # geometries of all countries,
+             # combined into a single file for each level
+        ├── [region_level.geojson]
+        └── [region_level.topo.json]
 ```
 
 For example:
@@ -29,6 +33,8 @@ For example:
 ```
 
 Clients can consume the data committed into this repo by following the link to the raw data, example: https://raw.githubusercontent.com/sei-international/trase-regions/main/data/ar/1.geojson
+
+After extracting data for all regions, this script also combines them into a single geojson and topojson file for each region level, placing them in the folder `data/all`, e.g. `data/all/1.geojson` (for all level 1 geometries across all countries), or `data/all/biome.geojson` (for all biomes).
 
 ## Prerequisites
 
