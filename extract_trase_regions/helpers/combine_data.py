@@ -21,4 +21,4 @@ def combine_data(level, OUT_FOLDER):
     df.to_file(f"{filename}.geojson", driver="GeoJSON")
 
     topo = gdf_to_topojson(df)
-    save_topojson_to_file(topo, f"{filename}.topo.json")
+    save_topojson_to_file(topo, filename)
