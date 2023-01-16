@@ -27,15 +27,6 @@
         "path_topojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/ar/3.topo.json"
     },
     {
-        "country": "ARGENTINA",
-        "country_code": "AR",
-        "level": "biome",
-        "region_type": "BIOME",
-        "regions_count": 15,
-        "path_geojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/ar/biome.geojson",
-        "path_topojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/ar/biome.topo.json"
-    },
-    {
         "country": "BOLIVIA",
         "country_code": "BO",
         "level": "1",
@@ -124,15 +115,6 @@
         "regions_count": 5570,
         "path_geojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/br/6.geojson",
         "path_topojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/br/6.topo.json"
-    },
-    {
-        "country": "BRAZIL",
-        "country_code": "BR",
-        "level": "biome",
-        "region_type": "BIOME",
-        "regions_count": 6,
-        "path_geojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/br/biome.geojson",
-        "path_topojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/br/biome.topo.json"
     },
     {
         "country": "COLOMBIA",
@@ -295,15 +277,6 @@
         "regions_count": 255,
         "path_geojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/py/3.geojson",
         "path_topojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/py/3.topo.json"
-    },
-    {
-        "country": "PARAGUAY",
-        "country_code": "PY",
-        "level": "biome",
-        "region_type": "BIOME",
-        "regions_count": 5,
-        "path_geojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/py/biome.geojson",
-        "path_topojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/py/biome.topo.json"
     },
     {
         "country": "PERU",
