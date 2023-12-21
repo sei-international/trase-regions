@@ -252,6 +252,15 @@
         "path_topojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/id/4.topo.json"
     },
     {
+        "country": "INDONESIA",
+        "country_code": "ID",
+        "level": "wood-pulp-concession",
+        "region_type": "WOOD PULP CONCESSION",
+        "regions_count": 301,
+        "path_geojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/id/wood-pulp-concession.geojson",
+        "path_topojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/id/wood-pulp-concession.topo.json"
+    },
+    {
         "country": "PARAGUAY",
         "country_code": "PY",
         "level": "1",
