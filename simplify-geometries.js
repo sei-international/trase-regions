@@ -24,6 +24,14 @@ const readFiles = (fileExtension) => {
 };
 
 const simplifyGeometries = (filePath, format, extension) => {
+  const stats = fs.statSync(filePath);
+  const fileSizeInBytes = stats.size;
+  const fileSizeInMegabytes = fileSizeInBytes / 1000000.0;
+  if (fileSizeInMegabytes < 2) {
+    console.log(`${filePath} is ${fileSizeInMegabytes} megabytes, skipping`);
+    return;
+  }
+
   console.log(`simplifying ${filePath}`);
 
   const fileName = path.basename(filePath);
