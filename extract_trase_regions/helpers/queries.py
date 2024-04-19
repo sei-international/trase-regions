@@ -21,7 +21,7 @@ WITH {cte_table_name} AS (
             ELSE level::VARCHAR
         END AS level,
         geometry
-    FROM splitgraph.regions
+    FROM website.regions
 )
 """
 
