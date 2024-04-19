@@ -41,10 +41,10 @@ const simplifyGeometries = (filePath, format, extension) => {
 const geojsonFiles = readFiles(".geojson");
 const topoJsonFiles = readFiles(".topo.json");
 
-geojsonFiles.forEach((filePath) =>
-  simplifyGeometries(filePath, "geojson", ".geojson")
-);
+// geojsonFiles.forEach((filePath) =>
+//   simplifyGeometries(filePath, "geojson", ".geojson")
+// );
 
 topoJsonFiles.forEach((filePath) =>
-  simplifyGeometries(filePath, "topojson", ".topo.json")
+  simplifyGeometries(filePath, "topojson", ".json")
 );
