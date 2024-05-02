@@ -2,6 +2,7 @@ from helpers.constants import (
     COUNTRY_CODE_COL,
     COUNTRY_NAME_COL,
     LEVEL_COL,
+    LEVEL_NAME_COL,
     GEOMETRY_COL,
     SIMPLIFY_DEGREES,
 )
@@ -15,7 +16,7 @@ WITH {cte_table_name} AS (
         name,
         trase_id,
         biome,
-        region_type,
+        {LEVEL_NAME_COL},
         country,
         TRUNC(level)::VARCHAR AS level,
         {LEVEL_COL},
@@ -36,7 +37,7 @@ def regions_dictionary_query():
         LEFT(trase_id, 2) as {COUNTRY_CODE_COL},
         level,
         {LEVEL_COL} AS {LEVEL_COL},
-        region_type,
+        {LEVEL_NAME_COL},
         COUNT(1) as regions_count
     FROM {cte_table_name}
     WHERE geometry IS NOT NULL
@@ -68,7 +69,7 @@ def generate_geojson_query(country_name, level):
             trase_id,
             biome,
             geometry,
-            region_type,
+            {LEVEL_NAME_COL},
             "{LEVEL_COL}",
             country
         FROM {cte_table_name}

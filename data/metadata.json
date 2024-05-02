@@ -4,7 +4,7 @@
         "country_code": "AR",
         "level": "1",
         "node_type_slug": "country",
-        "region_type": "COUNTRY",
+        "node_type_name": "Country",
         "regions_count": 1,
         "path_geojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/ar/country.geojson",
         "path_topojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/ar/country.topo.json"
@@ -14,7 +14,7 @@
         "country_code": "AR",
         "level": "2",
         "node_type_slug": "province",
-        "region_type": "PROVINCE",
+        "node_type_name": "Province",
         "regions_count": 24,
         "path_geojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/ar/province.geojson",
         "path_topojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/ar/province.topo.json"
@@ -24,7 +24,7 @@
         "country_code": "AR",
         "level": "3",
         "node_type_slug": "department",
-        "region_type": "DEPARTMENT",
+        "node_type_name": "Department",
         "regions_count": 527,
         "path_geojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/ar/department.geojson",
         "path_topojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/ar/department.topo.json"
@@ -34,7 +34,7 @@
         "country_code": "BO",
         "level": "1",
         "node_type_slug": "country",
-        "region_type": "COUNTRY",
+        "node_type_name": "Country",
         "regions_count": 1,
         "path_geojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/bo/country.geojson",
         "path_topojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/bo/country.topo.json"
@@ -44,7 +44,7 @@
         "country_code": "BO",
         "level": "2",
         "node_type_slug": "department",
-        "region_type": "DEPARTMENT",
+        "node_type_name": "Department",
         "regions_count": 14,
         "path_geojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/bo/department.geojson",
         "path_topojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/bo/department.topo.json"
@@ -54,7 +54,7 @@
         "country_code": "BO",
         "level": "3",
         "node_type_slug": "province",
-        "region_type": "PROVINCE",
+        "node_type_name": "Province",
         "regions_count": 112,
         "path_geojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/bo/province.geojson",
         "path_topojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/bo/province.topo.json"
@@ -64,7 +64,7 @@
         "country_code": "BO",
         "level": "4",
         "node_type_slug": "municipality",
-        "region_type": "MUNICIPALITY",
+        "node_type_name": "Municipality",
         "regions_count": 339,
         "path_geojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/bo/municipality.geojson",
         "path_topojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/bo/municipality.topo.json"
@@ -74,7 +74,7 @@
         "country_code": "BR",
         "level": "1",
         "node_type_slug": "country",
-        "region_type": "COUNTRY",
+        "node_type_name": "Country",
         "regions_count": 1,
         "path_geojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/br/country.geojson",
         "path_topojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/br/country.topo.json"
@@ -84,7 +84,7 @@
         "country_code": "BR",
         "level": "2",
         "node_type_slug": "region",
-        "region_type": "REGION",
+        "node_type_name": "Region",
         "regions_count": 5,
         "path_geojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/br/region.geojson",
         "path_topojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/br/region.topo.json"
@@ -94,7 +94,7 @@
         "country_code": "BR",
         "level": "3",
         "node_type_slug": "state",
-        "region_type": "STATE",
+        "node_type_name": "State",
         "regions_count": 27,
         "path_geojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/br/state.geojson",
         "path_topojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/br/state.topo.json"
@@ -104,7 +104,7 @@
         "country_code": "BR",
         "level": "4",
         "node_type_slug": "mesoregion",
-        "region_type": "MESOREGION",
+        "node_type_name": "Mesoregion",
         "regions_count": 137,
         "path_geojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/br/mesoregion.geojson",
         "path_topojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/br/mesoregion.topo.json"
@@ -114,7 +114,7 @@
         "country_code": "BR",
         "level": "5",
         "node_type_slug": "microregion",
-        "region_type": "MICROREGION",
+        "node_type_name": "Microregion",
         "regions_count": 558,
         "path_geojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/br/microregion.geojson",
         "path_topojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/br/microregion.topo.json"
@@ -124,7 +124,7 @@
         "country_code": "BR",
         "level": "6",
         "node_type_slug": "municipality",
-        "region_type": "MUNICIPALITY",
+        "node_type_name": "Municipality",
         "regions_count": 5570,
         "path_geojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/br/municipality.geojson",
         "path_topojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/br/municipality.topo.json"
@@ -134,7 +134,7 @@
         "country_code": "WP",
         "level": null,
         "node_type_slug": "port",
-        "region_type": "PORT",
+        "node_type_name": "Port",
         "regions_count": 29,
         "path_geojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/wp/port.geojson",
         "path_topojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/wp/port.topo.json"
@@ -144,7 +144,7 @@
         "country_code": null,
         "level": null,
         "node_type_slug": "port",
-        "region_type": "PORT",
+        "node_type_name": "Port",
         "regions_count": 124,
         "path_geojson": null,
         "path_topojson": null
@@ -154,7 +154,7 @@
         "country_code": "CO",
         "level": "1",
         "node_type_slug": "country",
-        "region_type": "COUNTRY",
+        "node_type_name": "Country",
         "regions_count": 1,
         "path_geojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/co/country.geojson",
         "path_topojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/co/country.topo.json"
@@ -164,7 +164,7 @@
         "country_code": "CO",
         "level": "2",
         "node_type_slug": "department",
-        "region_type": "DEPARTMENT",
+        "node_type_name": "Department",
         "regions_count": 33,
         "path_geojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/co/department.geojson",
         "path_topojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/co/department.topo.json"
@@ -174,7 +174,7 @@
         "country_code": "CO",
         "level": "3",
         "node_type_slug": "municipality",
-        "region_type": "MUNICIPALITY",
+        "node_type_name": "Municipality",
         "regions_count": 1122,
         "path_geojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/co/municipality.geojson",
         "path_topojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/co/municipality.topo.json"
@@ -184,7 +184,7 @@
         "country_code": "CI",
         "level": "1",
         "node_type_slug": "country",
-        "region_type": "COUNTRY",
+        "node_type_name": "Country",
         "regions_count": 1,
         "path_geojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/ci/country.geojson",
         "path_topojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/ci/country.topo.json"
@@ -194,7 +194,7 @@
         "country_code": "CI",
         "level": "2",
         "node_type_slug": "district",
-        "region_type": "DISTRICT",
+        "node_type_name": "District",
         "regions_count": 14,
         "path_geojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/ci/district.geojson",
         "path_topojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/ci/district.topo.json"
@@ -204,7 +204,7 @@
         "country_code": "CI",
         "level": "3",
         "node_type_slug": "region",
-        "region_type": "REGION",
+        "node_type_name": "Region",
         "regions_count": 33,
         "path_geojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/ci/region.geojson",
         "path_topojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/ci/region.topo.json"
@@ -214,7 +214,7 @@
         "country_code": "CI",
         "level": "4",
         "node_type_slug": "department",
-        "region_type": "DEPARTMENT",
+        "node_type_name": "Department",
         "regions_count": 108,
         "path_geojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/ci/department.geojson",
         "path_topojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/ci/department.topo.json"
@@ -224,7 +224,7 @@
         "country_code": "EC",
         "level": "1",
         "node_type_slug": "country",
-        "region_type": "COUNTRY",
+        "node_type_name": "Country",
         "regions_count": 1,
         "path_geojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/ec/country.geojson",
         "path_topojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/ec/country.topo.json"
@@ -234,7 +234,7 @@
         "country_code": "EC",
         "level": "2",
         "node_type_slug": "province",
-        "region_type": "PROVINCE",
+        "node_type_name": "Province",
         "regions_count": 25,
         "path_geojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/ec/province.geojson",
         "path_topojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/ec/province.topo.json"
@@ -244,7 +244,7 @@
         "country_code": "EC",
         "level": "3",
         "node_type_slug": "canton",
-        "region_type": "CANTON",
+        "node_type_name": "Canton",
         "regions_count": 224,
         "path_geojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/ec/canton.geojson",
         "path_topojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/ec/canton.topo.json"
@@ -254,7 +254,7 @@
         "country_code": "EC",
         "level": "4",
         "node_type_slug": "parish",
-        "region_type": "PARISH",
+        "node_type_name": "Parish",
         "regions_count": 1040,
         "path_geojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/ec/parish.geojson",
         "path_topojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/ec/parish.topo.json"
@@ -264,7 +264,7 @@
         "country_code": "GH",
         "level": "1",
         "node_type_slug": "country",
-        "region_type": "COUNTRY",
+        "node_type_name": "Country",
         "regions_count": 1,
         "path_geojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/gh/country.geojson",
         "path_topojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/gh/country.topo.json"
@@ -274,7 +274,7 @@
         "country_code": "ID",
         "level": "1",
         "node_type_slug": "country",
-        "region_type": "COUNTRY",
+        "node_type_name": "Country",
         "regions_count": 1,
         "path_geojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/id/country.geojson",
         "path_topojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/id/country.topo.json"
@@ -284,7 +284,7 @@
         "country_code": "ID",
         "level": "3",
         "node_type_slug": "province",
-        "region_type": "PROVINCE",
+        "node_type_name": "Province",
         "regions_count": 34,
         "path_geojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/id/province.geojson",
         "path_topojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/id/province.topo.json"
@@ -294,7 +294,7 @@
         "country_code": "ID",
         "level": "4",
         "node_type_slug": "kabupaten",
-        "region_type": "KABUPATEN",
+        "node_type_name": "Kabupaten",
         "regions_count": 514,
         "path_geojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/id/kabupaten.geojson",
         "path_topojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/id/kabupaten.topo.json"
@@ -304,7 +304,7 @@
         "country_code": "ID",
         "level": null,
         "node_type_slug": "palm-oil-concession",
-        "region_type": "COUNTRY",
+        "node_type_name": "Palm oil concession",
         "regions_count": 11891,
         "path_geojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/id/palm-oil-concession.geojson",
         "path_topojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/id/palm-oil-concession.topo.json"
@@ -314,7 +314,7 @@
         "country_code": "ID",
         "level": null,
         "node_type_slug": "port",
-        "region_type": "PORT",
+        "node_type_name": "Port",
         "regions_count": 158,
         "path_geojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/id/port.geojson",
         "path_topojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/id/port.topo.json"
@@ -324,7 +324,7 @@
         "country_code": "ID",
         "level": null,
         "node_type_slug": "wood-pulp-concession",
-        "region_type": "COUNTRY",
+        "node_type_name": "Wood pulp concession",
         "regions_count": 91,
         "path_geojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/id/wood-pulp-concession.geojson",
         "path_topojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/id/wood-pulp-concession.topo.json"
@@ -334,7 +334,7 @@
         "country_code": "PY",
         "level": "1",
         "node_type_slug": "country",
-        "region_type": "COUNTRY",
+        "node_type_name": "Country",
         "regions_count": 1,
         "path_geojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/py/country.geojson",
         "path_topojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/py/country.topo.json"
@@ -344,7 +344,7 @@
         "country_code": "PY",
         "level": "2",
         "node_type_slug": "department",
-        "region_type": "DEPARTMENT",
+        "node_type_name": "Department",
         "regions_count": 18,
         "path_geojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/py/department.geojson",
         "path_topojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/py/department.topo.json"
@@ -354,7 +354,7 @@
         "country_code": "PY",
         "level": "3",
         "node_type_slug": "district",
-        "region_type": "DISTRICT",
+        "node_type_name": "District",
         "regions_count": 255,
         "path_geojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/py/district.geojson",
         "path_topojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/py/district.topo.json"
@@ -364,7 +364,7 @@
         "country_code": "PE",
         "level": "1",
         "node_type_slug": "country",
-        "region_type": "COUNTRY",
+        "node_type_name": "Country",
         "regions_count": 1,
         "path_geojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/pe/country.geojson",
         "path_topojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/pe/country.topo.json"
