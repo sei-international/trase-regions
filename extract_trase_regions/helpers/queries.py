@@ -8,8 +8,6 @@ from helpers.constants import (
 )
 
 cte_table_name = "base"
-# The CASE statement assigns a level = 'biome' to biomes,
-# since these don't have a level right now in the db.
 regions_cte = f"""
 WITH {cte_table_name} AS (
     SELECT
