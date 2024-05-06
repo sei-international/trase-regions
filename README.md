@@ -42,6 +42,8 @@ You'll need Python and [Poetry](https://python-poetry.org/), a Python package ma
 
 ## Installation
 
+### Ubuntu
+
 Prerequisites on Ubuntu (for the `psycopg2` package):
 
 ```bash
@@ -53,6 +55,40 @@ Then:
 ```bash
 poetry install
 ```
+
+For simplify-geometries script:
+
+```
+nvm install
+nvm use
+npm install
+```
+
+### Mac
+
+Install postgresql:
+
+```bash
+brew install postgresql
+```
+
+Then (if you have pyenv):
+
+```
+pyenv install 3.8
+poetry env use 3.8
+poetry install
+```
+
+For simplify-geometries script:
+
+```
+nvm install
+nvm use
+npm install
+```
+
+---
 
 Make a copy of `secrets.yml.sample` as `secrets.yml` and add your credentials for the database there. Remember to keep these credentials safe and **never commit them**.
 

@@ -2,25 +2,23 @@ from helpers.constants import (
     COUNTRY_CODE_COL,
     COUNTRY_NAME_COL,
     LEVEL_COL,
+    LEVEL_NAME_COL,
+    GEOMETRY_COL,
     SIMPLIFY_DEGREES,
 )
 
 cte_table_name = "base"
-# The CASE statement assigns a level = 'biome' to biomes,
-# since these don't have a level right now in the db.
 regions_cte = f"""
 WITH {cte_table_name} AS (
     SELECT
         name,
         trase_id,
         biome,
-        region_type,
+        {LEVEL_NAME_COL},
         country,
-        CASE
-            WHEN region_type = 'BIOME' THEN 'biome'
-            ELSE level::VARCHAR
-        END AS level,
-        geometry
+        TRUNC(level)::VARCHAR AS level,
+        {LEVEL_COL},
+        {GEOMETRY_COL} AS geometry
     FROM website.regions
 )
 """
@@ -35,14 +33,15 @@ def regions_dictionary_query():
     SELECT
         country AS {COUNTRY_NAME_COL},
         LEFT(trase_id, 2) as {COUNTRY_CODE_COL},
-        level AS {LEVEL_COL},
-        region_type,
+        level,
+        {LEVEL_COL} AS {LEVEL_COL},
+        {LEVEL_NAME_COL},
         COUNT(1) as regions_count
     FROM {cte_table_name}
     WHERE geometry IS NOT NULL
-      AND level IS NOT NULL
-    GROUP BY 1,2,3,4
-    ORDER BY 1,2,3,4
+      AND {LEVEL_COL} IS NOT NULL
+    GROUP BY 1,2,3,4,5
+    ORDER BY 1,2,3,4,5
     """
 
 
@@ -59,7 +58,8 @@ def generate_geojson_query(country_name, level):
         'type',       'Feature',
         'id',         trase_id,
         'properties', to_jsonb( r.* ) - 'geometry',
-        'geometry',   ST_AsGeoJSON(ST_Simplify(geometry, {SIMPLIFY_DEGREES}), 4)::jsonb
+        'geometry',   ST_AsGeoJSON(ST_Simplify(ST_GeomFromGeoJSON(geometry), {SIMPLIFY_DEGREES}), 4)::jsonb
+        -- 'geometry', geometry
         ) AS json
     FROM (
         SELECT
@@ -67,12 +67,12 @@ def generate_geojson_query(country_name, level):
             trase_id,
             biome,
             geometry,
-            region_type,
-            "level",
+            {LEVEL_NAME_COL},
+            "{LEVEL_COL}",
             country
         FROM {cte_table_name}
         WHERE geometry IS NOT NULL
-            AND "level" = '{level}'
+            AND "{LEVEL_COL}" = '{level}'
             AND country = '{country_name.replace("'", "''")}'
         ) r
     ) as t
