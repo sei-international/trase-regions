@@ -18,6 +18,8 @@ WITH {cte_table_name} AS (
         country,
         TRUNC(level)::VARCHAR AS level,
         {LEVEL_COL},
+        year_start,
+        year_end,
         {GEOMETRY_COL} AS geometry
     FROM website.regions
 )
@@ -36,12 +38,14 @@ def regions_dictionary_query():
         level,
         {LEVEL_COL} AS {LEVEL_COL},
         {LEVEL_NAME_COL},
+        year_start,
+        year_end,
         COUNT(1) as regions_count
     FROM {cte_table_name}
     WHERE geometry IS NOT NULL
       AND {LEVEL_COL} IS NOT NULL
-    GROUP BY 1,2,3,4,5
-    ORDER BY 1,2,3,4,5
+    GROUP BY 1,2,3,4,5,6,7
+    ORDER BY 1,2,3,4,5,6,7
     """
 
 
