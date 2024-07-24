@@ -36,7 +36,6 @@ def extract_and_save_data(row):
     country_code = row[COUNTRY_CODE_COL]
     level = row[LEVEL_COL]
     print(f"---> {country_name}: getting level {level} data")
-    print(generate_geojson_query(country_name, level))
     result = run_sql_return_df(
                 generate_geojson_query(country_name, level)
              ).iat[0, 0]  # get first row first column
