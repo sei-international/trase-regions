@@ -145,7 +145,7 @@
         "level": null,
         "node_type_slug": "port",
         "node_type_name": "Port",
-        "regions_count": 124,
+        "regions_count": 128,
         "path_geojson": null,
         "path_topojson": null
     },
