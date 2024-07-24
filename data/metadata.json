@@ -45,7 +45,7 @@
         "level": "2",
         "node_type_slug": "department",
         "node_type_name": "Department",
-        "regions_count": 14,
+        "regions_count": 9,
         "path_geojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/bo/department.geojson",
         "path_topojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/bo/department.topo.json"
     },
