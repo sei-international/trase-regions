@@ -75,8 +75,8 @@ brew install postgresql
 Then (if you have pyenv):
 
 ```
-pyenv install 3.8
-poetry env use 3.8
+pyenv install 3.11
+poetry env use 3.11
 poetry install
 ```
 
@@ -104,6 +104,12 @@ To run for specific regions, pass the 2-letter country codes as arguments (e.g. 
 
 ```bash
 poetry run python extract_trase_regions --country_codes CI BO
+```
+
+To simplify geojsons which are too large, run:
+
+```bash
+npm run simplify
 ```
 
 ## To-do
