@@ -11,15 +11,24 @@ cte_table_name = "base"
 regions_cte = f"""
 WITH {cte_table_name} AS (
     SELECT
-        name,
-        trase_id,
-        biome,
-        {LEVEL_NAME_COL},
-        country,
-        TRUNC(level)::VARCHAR AS level,
-        {LEVEL_COL},
-        {GEOMETRY_COL} AS geometry
-    FROM website.regions
+        r.name,
+        r.trase_id,
+        r.biome,
+        r.{LEVEL_NAME_COL},
+        r.country,
+        TRUNC(r.level)::VARCHAR AS level,
+        r.{LEVEL_COL},
+        p.name AS parent_name,
+        p.{LEVEL_NAME_COL} AS parent_{LEVEL_NAME_COL},
+        r.{GEOMETRY_COL} AS geometry
+    FROM website.regions AS r
+    LEFT JOIN website.regions AS p
+        ON p.trase_id =
+        CASE
+            -- HACK: force Brazil to use states as parent region
+            WHEN r.country = 'BRAZIL' AND r.{LEVEL_COL} = 'municipality' THEN LEFT(r.trase_id, 5)
+            ELSE r.parent_trase_id
+        END
 )
 """
 
@@ -69,6 +78,8 @@ def generate_geojson_query(country_name, level):
             geometry,
             {LEVEL_NAME_COL},
             "{LEVEL_COL}",
+            parent_name,
+            parent_{LEVEL_NAME_COL},
             country
         FROM {cte_table_name}
         WHERE geometry IS NOT NULL
