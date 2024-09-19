@@ -18,17 +18,10 @@ WITH {cte_table_name} AS (
         r.country,
         TRUNC(r.level)::VARCHAR AS level,
         r.{LEVEL_COL},
-        p.name AS parent_name,
-        p.{LEVEL_NAME_COL} AS parent_{LEVEL_NAME_COL},
+        parent_name,
+        parent_{LEVEL_NAME_COL},
         r.{GEOMETRY_COL} AS geometry
     FROM website.regions AS r
-    LEFT JOIN website.regions AS p
-        ON p.trase_id =
-        CASE
-            -- HACK: force Brazil to use states as parent region
-            WHEN r.country = 'BRAZIL' AND r.{LEVEL_COL} = 'municipality' THEN LEFT(r.trase_id, 5)
-            ELSE r.parent_trase_id
-        END
 )
 """
 
