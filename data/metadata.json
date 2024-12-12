@@ -270,6 +270,26 @@
         "path_topojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/gh/country.topo.json"
     },
     {
+        "country": "GHANA",
+        "country_code": "GH",
+        "level": "2",
+        "node_type_slug": "region",
+        "node_type_name": "Region",
+        "regions_count": 16,
+        "path_geojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/gh/region.geojson",
+        "path_topojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/gh/region.topo.json"
+    },
+    {
+        "country": "GHANA",
+        "country_code": "GH",
+        "level": "3",
+        "node_type_slug": "district",
+        "node_type_name": "District",
+        "regions_count": 260,
+        "path_geojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/gh/district.geojson",
+        "path_topojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/gh/district.topo.json"
+    },
+    {
         "country": "INDONESIA",
         "country_code": "ID",
         "level": "1",
