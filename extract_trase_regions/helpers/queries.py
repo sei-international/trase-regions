@@ -21,8 +21,8 @@ WITH {cte_table_name} AS (
         p.name AS parent_name,
         p.{LEVEL_NAME_COL} AS parent_{LEVEL_NAME_COL},
         r.{GEOMETRY_COL} AS geometry
-    FROM website.regions AS r
-    LEFT JOIN website.regions AS p
+    FROM views.regions AS r
+    LEFT JOIN views.regions AS p
         ON p.trase_id =
         CASE
             -- HACK: force Brazil to use states as parent region
