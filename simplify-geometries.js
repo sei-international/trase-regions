@@ -39,7 +39,7 @@ const simplifyGeometries = (filePath, format, extension) => {
 
   try {
     mapshaper.runCommands(
-      `-i ${filePath} -simplify visvalingam percentage=0.005 keep-shapes -o precision=0.00001 ${folderPath} target=* force format=${format} extension=${extension} -clean`
+      `-i ${filePath} -simplify visvalingam percentage=0.005 keep-shapes -snap -clean -o precision=0.00001 ${folderPath} target=* force format=${format} extension=${extension}`
     );
   } catch (error) {
     console.error(`Error simplifying ${filePath}: ${error.message}`);
