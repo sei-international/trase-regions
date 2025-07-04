@@ -67,7 +67,7 @@ def generate_geojson_query(country_name, level):
         'type',       'Feature',
         'id',         trase_id,
         'properties', to_jsonb( r.* ) - 'geometry',
-        'geometry',   ST_AsGeoJSON(ST_Simplify(ST_GeomFromGeoJSON(geometry), {SIMPLIFY_DEGREES}), 4)::jsonb
+        'geometry',   ST_AsGeoJSON(ST_GeomFromGeoJSON(geometry))::jsonb
         -- 'geometry', geometry
         ) AS json
     FROM (
