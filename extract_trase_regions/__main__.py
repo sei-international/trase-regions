@@ -2,7 +2,6 @@ from pathlib import Path
 from argparse import ArgumentParser
 import json
 
-from helpers.yaml import parse_yaml
 from helpers.json import save_geojson_to_file, save_topojson_to_file
 from helpers.topo import load_gdf_from_file, gdf_to_topojson
 from helpers.db import run_sql_return_df
@@ -73,7 +72,7 @@ if __name__ == "__main__":
         except Exception as e:
             print(f"---> error: {e}")
     levels = countries_data.level.unique()
-    print(f"---> combining data for each level into a single file")
+    print("---> combining data for each level into a single file")
     for level in levels:
         combine_data(level, OUT_FOLDER)
     print("---> all done.")

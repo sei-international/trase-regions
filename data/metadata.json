@@ -186,8 +186,8 @@
         "node_type_slug": "port",
         "node_type_name": "Port",
         "regions_count": 3,
-        "path_geojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/wp/port.geojson",
-        "path_topojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/wp/port.topo.json"
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/wp/port.geojson",
+        "path_topojson": "https://resources.trase.earth/data/trase-regions/wp/port.topo.json"
     },
     {
         "country": "COLOMBIA",
@@ -316,8 +316,8 @@
         "node_type_slug": "port",
         "node_type_name": "Port",
         "regions_count": 4,
-        "path_geojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/wp/port.geojson",
-        "path_topojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/wp/port.topo.json"
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/wp/port.geojson",
+        "path_topojson": "https://resources.trase.earth/data/trase-regions/wp/port.topo.json"
     },
     {
         "country": "INDIA",
@@ -438,5 +438,45 @@
         "regions_count": 1,
         "path_geojson": "https://resources.trase.earth/data/trase-regions/pe/country.geojson",
         "path_topojson": "https://resources.trase.earth/data/trase-regions/pe/country.topo.json"
+    },
+    {
+        "country": "PERU",
+        "country_code": "WP",
+        "level": null,
+        "node_type_slug": "port",
+        "node_type_name": "Port",
+        "regions_count": 3,
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/wp/port.geojson",
+        "path_topojson": "https://resources.trase.earth/data/trase-regions/wp/port.topo.json"
+    },
+    {
+        "country": "PERU",
+        "country_code": null,
+        "level": null,
+        "node_type_slug": "port",
+        "node_type_name": "Port",
+        "regions_count": 5,
+        "path_geojson": null,
+        "path_topojson": null
+    },
+    {
+        "country": "TANZANIA",
+        "country_code": "WP",
+        "level": null,
+        "node_type_slug": "port",
+        "node_type_name": "Port",
+        "regions_count": 2,
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/wp/port.geojson",
+        "path_topojson": "https://resources.trase.earth/data/trase-regions/wp/port.topo.json"
+    },
+    {
+        "country": "TANZANIA",
+        "country_code": null,
+        "level": null,
+        "node_type_slug": "port",
+        "node_type_name": "Port",
+        "regions_count": 9,
+        "path_geojson": null,
+        "path_topojson": null
     }
 ]

@@ -1,5 +1,4 @@
 import psycopg2
-import pandas as pd
 import pandas.io.sql as sqlio
 
 from helpers.yaml import parse_yaml
