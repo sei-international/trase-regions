@@ -4,6 +4,8 @@ const mapshaper = require("mapshaper");
 const childProcess = require("child_process");
 const dataFolder = "./data";
 
+const MAX_FILE_SIZE_MB = 6.5;
+
 const readFiles = (fileExtension) => {
   const files = [];
   const walkSync = (dir, fileList) => {
@@ -23,12 +25,12 @@ const readFiles = (fileExtension) => {
   return walkSync(dataFolder, files);
 };
 
-const simplifyGeometries = (filePath, format, extension) => {
+const simplifyGeometries = async (filePath, format, extension) => {
   const stats = fs.statSync(filePath);
   const fileSizeInBytes = stats.size;
   const fileSizeInMegabytes = fileSizeInBytes / 1000000.0;
-  if (fileSizeInMegabytes < 2) {
-    console.log(`${filePath} is ${fileSizeInMegabytes} megabytes, skipping`);
+  if (fileSizeInMegabytes < MAX_FILE_SIZE_MB) {
+    // console.log(`${filePath} is ${fileSizeInMegabytes} megabytes, skipping`);
     return;
   }
 
@@ -38,8 +40,8 @@ const simplifyGeometries = (filePath, format, extension) => {
   const folderPath = filePath.replace(fileName, "");
 
   try {
-    mapshaper.runCommands(
-      `-i ${filePath} -simplify visvalingam percentage=0.005 keep-shapes -snap -clean -o precision=0.00001 ${folderPath} target=* force format=${format} extension=${extension}`
+    await mapshaper.runCommands(
+      `-i ${filePath} -simplify visvalingam percentage=0.01 keep-shapes -snap -clean -o precision=0.00001 ${folderPath} target=* force format=${format} extension=${extension}`
     );
   } catch (error) {
     console.error(`Error simplifying ${filePath}: ${error.message}`);

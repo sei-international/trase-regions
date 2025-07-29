@@ -180,6 +180,26 @@
         "path_topojson": "https://resources.trase.earth/data/trase-regions/co/municipality.topo.json"
     },
     {
+        "country": "COLOMBIA",
+        "country_code": "WP",
+        "level": null,
+        "node_type_slug": "port",
+        "node_type_name": "Port",
+        "regions_count": 3,
+        "path_geojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/wp/port.geojson",
+        "path_topojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/wp/port.topo.json"
+    },
+    {
+        "country": "COLOMBIA",
+        "country_code": null,
+        "level": null,
+        "node_type_slug": "port",
+        "node_type_name": "Port",
+        "regions_count": 7,
+        "path_geojson": null,
+        "path_topojson": null
+    },
+    {
         "country": "COTE D'IVOIRE",
         "country_code": "CI",
         "level": "1",
@@ -290,6 +310,26 @@
         "path_topojson": "https://resources.trase.earth/data/trase-regions/gh/district.topo.json"
     },
     {
+        "country": "INDIA",
+        "country_code": "WP",
+        "level": null,
+        "node_type_slug": "port",
+        "node_type_name": "Port",
+        "regions_count": 4,
+        "path_geojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/wp/port.geojson",
+        "path_topojson": "https://raw.githubusercontent.com/sei-international/trase-regions/main/data/wp/port.topo.json"
+    },
+    {
+        "country": "INDIA",
+        "country_code": null,
+        "level": null,
+        "node_type_slug": "port",
+        "node_type_name": "Port",
+        "regions_count": 41,
+        "path_geojson": null,
+        "path_topojson": null
+    },
+    {
         "country": "INDONESIA",
         "country_code": "ID",
         "level": "1",
@@ -335,7 +375,7 @@
         "level": null,
         "node_type_slug": "port",
         "node_type_name": "Port",
-        "regions_count": 158,
+        "regions_count": 159,
         "path_geojson": "https://resources.trase.earth/data/trase-regions/id/port.geojson",
         "path_topojson": "https://resources.trase.earth/data/trase-regions/id/port.topo.json"
     },
@@ -348,6 +388,16 @@
         "regions_count": 91,
         "path_geojson": "https://resources.trase.earth/data/trase-regions/id/wood-pulp-concession.geojson",
         "path_topojson": "https://resources.trase.earth/data/trase-regions/id/wood-pulp-concession.topo.json"
+    },
+    {
+        "country": "INDONESIA",
+        "country_code": null,
+        "level": null,
+        "node_type_slug": "port",
+        "node_type_name": "Port",
+        "regions_count": 2,
+        "path_geojson": null,
+        "path_topojson": null
     },
     {
         "country": "PARAGUAY",

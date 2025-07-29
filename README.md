@@ -108,7 +108,7 @@ To run for specific regions, pass the 2-letter country codes as arguments (e.g. 
 poetry run python extract_trase_regions --country_codes CI BO
 ```
 
-To simplify geojsons which are too large, run:
+To simplify geojsons which are too large, run (run this as many times as needed, until all files are under the maxiumum file size):
 
 ```bash
 npm run simplify
