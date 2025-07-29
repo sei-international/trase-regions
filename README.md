@@ -32,7 +32,9 @@ For example:
     └── etc.
 ```
 
-Clients can consume the data committed into this repo by following the link to the raw data, example: https://raw.githubusercontent.com/sei-international/trase-regions/main/data/ar/1.geojson
+~~Clients can consume the data committed into this repo by following the link to the raw data, example: https://raw.githubusercontent.com/sei-international/trase-regions/main/data/ar/1.geojson~~
+
+Clients consume this data from our AWS Cloudfront distribution, that serves files from AWS S3. For how to deploy when files are changed, see "Copy to S3" section below.
 
 After extracting data for all regions, this script also combines them into a single geojson and topojson file for each region level, placing them in the folder `data/all`, e.g. `data/all/1.geojson` (for all level 1 geometries across all countries), or `data/all/biome.geojson` (for all biomes).
 
@@ -111,6 +113,11 @@ To simplify geojsons which are too large, run (run this as many times as needed,
 ```bash
 npm run simplify
 ```
+
+## Copy to S3
+
+aws s3 sync ./data/ s3://resources.trase.earth/data/trase-regions/ --exclude ".DS_Store"
+aws cloudfront create-invalidation --distribution-id ES06N5GMZ1GUS --paths "/data/trase-regions/*"
 
 ## To-do
 

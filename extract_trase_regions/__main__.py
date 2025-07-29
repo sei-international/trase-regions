@@ -2,7 +2,6 @@ from pathlib import Path
 from argparse import ArgumentParser
 import json
 
-from helpers.yaml import parse_yaml
 from helpers.json import save_geojson_to_file, save_topojson_to_file
 from helpers.topo import load_gdf_from_file, gdf_to_topojson
 from helpers.db import run_sql_return_df
@@ -51,7 +50,7 @@ def extract_and_save_data(row):
 
 def save_regions_metadata(df):
     df_tmp = df
-    base_path = f"{REPO_FILES_URL}/{OUT_FOLDER}/"
+    base_path = f"{REPO_FILES_URL}/"
     df_tmp["path_geojson"] = base_path + df[COUNTRY_CODE_COL].str.lower() + "/" + df[LEVEL_COL].astype(str) + f".{GEOJSON_EXTENSION}"
     df_tmp["path_topojson"] = base_path + df[COUNTRY_CODE_COL].str.lower() + "/" + df[LEVEL_COL].astype(str) + f".{TOPOJSON_EXTENSION}"
     # need to do the following so pandas won't escape forward slashes in URLs
@@ -73,7 +72,7 @@ if __name__ == "__main__":
         except Exception as e:
             print(f"---> error: {e}")
     levels = countries_data.level.unique()
-    print(f"---> combining data for each level into a single file")
+    print("---> combining data for each level into a single file")
     for level in levels:
         combine_data(level, OUT_FOLDER)
     print("---> all done.")
