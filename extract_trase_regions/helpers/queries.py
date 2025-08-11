@@ -4,7 +4,6 @@ from helpers.constants import (
     LEVEL_COL,
     LEVEL_NAME_COL,
     GEOMETRY_COL,
-    SIMPLIFY_DEGREES,
 )
 
 cte_table_name = "base"
@@ -47,7 +46,8 @@ def regions_dictionary_query():
         {LEVEL_NAME_COL},
         COUNT(1) as regions_count
     FROM {cte_table_name}
-    WHERE geometry IS NOT NULL
+    WHERE TRUE
+      AND geometry IS NOT NULL
       AND {LEVEL_COL} IS NOT NULL
     GROUP BY 1,2,3,4,5
     ORDER BY 1,2,3,4,5

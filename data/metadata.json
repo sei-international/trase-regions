@@ -30,6 +30,16 @@
         "path_topojson": "https://resources.trase.earth/data/trase-regions/ar/department.topo.json"
     },
     {
+        "country": "ARGENTINA",
+        "country_code": "AR",
+        "level": null,
+        "node_type_slug": "biome",
+        "node_type_name": "Biome",
+        "regions_count": 15,
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/ar/biome.geojson",
+        "path_topojson": "https://resources.trase.earth/data/trase-regions/ar/biome.topo.json"
+    },
+    {
         "country": "BOLIVIA",
         "country_code": "BO",
         "level": "1",
@@ -128,6 +138,16 @@
         "regions_count": 5570,
         "path_geojson": "https://resources.trase.earth/data/trase-regions/br/municipality.geojson",
         "path_topojson": "https://resources.trase.earth/data/trase-regions/br/municipality.topo.json"
+    },
+    {
+        "country": "BRAZIL",
+        "country_code": "BR",
+        "level": null,
+        "node_type_slug": "biome",
+        "node_type_name": "Biome",
+        "regions_count": 6,
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/br/biome.geojson",
+        "path_topojson": "https://resources.trase.earth/data/trase-regions/br/biome.topo.json"
     },
     {
         "country": "BRAZIL",
@@ -428,6 +448,16 @@
         "regions_count": 255,
         "path_geojson": "https://resources.trase.earth/data/trase-regions/py/district.geojson",
         "path_topojson": "https://resources.trase.earth/data/trase-regions/py/district.topo.json"
+    },
+    {
+        "country": "PARAGUAY",
+        "country_code": "PY",
+        "level": null,
+        "node_type_slug": "biome",
+        "node_type_name": "Biome",
+        "regions_count": 5,
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/py/biome.geojson",
+        "path_topojson": "https://resources.trase.earth/data/trase-regions/py/biome.topo.json"
     },
     {
         "country": "PERU",
