@@ -25,12 +25,14 @@ const readFiles = (fileExtension) => {
   return walkSync(dataFolder, files);
 };
 
-const simplifyGeometries = async (filePath, format, extension) => {
+const getFileSizeInMB = (filePath) => {
   const stats = fs.statSync(filePath);
   const fileSizeInBytes = stats.size;
-  const fileSizeInMegabytes = fileSizeInBytes / 1000000.0;
-  if (fileSizeInMegabytes < MAX_FILE_SIZE_MB) {
-    // console.log(`${filePath} is ${fileSizeInMegabytes} megabytes, skipping`);
+  return fileSizeInBytes / 1000000.0;
+}
+
+const simplifyGeometries = async (filePath, format, extension) => {
+  if (getFileSizeInMB(filePath) < MAX_FILE_SIZE_MB) {
     return;
   }
 
@@ -45,6 +47,13 @@ const simplifyGeometries = async (filePath, format, extension) => {
     );
   } catch (error) {
     console.error(`Error simplifying ${filePath}: ${error.message}`);
+  }
+
+  const s = getFileSizeInMB(filePath);
+  if (s > MAX_FILE_SIZE_MB) {
+    console.log(`⚠️ ${filePath} is still too large and this script needs to be re-run (${s} megabytes for a limit of ${fileSizeInMegabytes} megabytes`);
+  } else {
+    console.log(`✅ simplified ${filePath} to ${s} megabytes, which is under the limit`);
   }
 };
 
