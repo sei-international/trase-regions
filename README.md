@@ -44,6 +44,14 @@ You'll need Python and [Poetry](https://python-poetry.org/), a Python package ma
 
 ## Installation
 
+For simplify-geometries script:
+
+```
+nvm install
+nvm use
+npm install
+```
+
 ### Ubuntu
 
 Prerequisites on Ubuntu (for the `psycopg2` package):
@@ -56,14 +64,6 @@ Then:
 
 ```bash
 poetry install
-```
-
-For simplify-geometries script:
-
-```
-nvm install
-nvm use
-npm install
 ```
 
 ### Mac
@@ -80,14 +80,6 @@ Then (if you have pyenv):
 pyenv install 3.11
 poetry env use 3.11
 poetry install
-```
-
-For simplify-geometries script:
-
-```
-nvm install
-nvm use
-npm install
 ```
 
 ---
@@ -108,7 +100,9 @@ To run for specific regions, pass the 2-letter country codes as arguments (e.g. 
 poetry run python extract_trase_regions --country_codes CI BO
 ```
 
-To simplify geojsons which are too large, run (run this as many times as needed, until all files are under the maxiumum file size):
+To simplify geojsons which are too large, run the below command.
+The command should be run repeatedly until all files are under the maximum file size.
+The command output will indicate if a file is still too large.
 
 ```bash
 npm run simplify
