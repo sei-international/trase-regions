@@ -15,6 +15,10 @@ def combine_data(level, OUT_FOLDER):
     ]
     print(f"---> files found {files}")
     frames = [gpd.read_file(f) for f in files]
+
+    if not frames:
+        raise RuntimeError(f"---> no files found for level {level}, unable to combine")
+
     df = gpd.GeoDataFrame(pd.concat(frames))
     df = df.set_crs("epsg:4326")
     folder = f"{OUT_FOLDER}/all"
