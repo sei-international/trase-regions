@@ -375,7 +375,7 @@
         "level": "4",
         "node_type_slug": "kabupaten",
         "node_type_name": "Kabupaten",
-        "regions_count": 534,
+        "regions_count": 547,
         "path_geojson": "https://resources.trase.earth/data/trase-regions/id/kabupaten.geojson",
         "path_topojson": "https://resources.trase.earth/data/trase-regions/id/kabupaten.topo.json"
     },
