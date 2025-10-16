@@ -32,9 +32,7 @@ For example:
     └── etc.
 ```
 
-~~Clients can consume the data committed into this repo by following the link to the raw data, example: https://raw.githubusercontent.com/sei-international/trase-regions/main/data/ar/1.geojson~~
-
-Clients consume this data from our AWS Cloudfront distribution, that serves files from AWS S3. For how to deploy when files are changed, see "Copy to S3" section below.
+Clients consume this data from our AWS Cloudfront distribution that serves files from AWS S3. For how to deploy when files are changed, see "Copy to S3" section below.
 
 After extracting data for all regions, this script also combines them into a single geojson and topojson file for each region level, placing them in the folder `data/all`, e.g. `data/all/1.geojson` (for all level 1 geometries across all countries), or `data/all/biome.geojson` (for all biomes).
 
@@ -84,7 +82,7 @@ poetry install
 
 ---
 
-Make a copy of `secrets.yml.sample` as `secrets.yml` and add your credentials for the database there. Remember to keep these credentials safe and **never commit them**.
+Make a copy of `extract_trase_regions/secrets.yml.sample` as `extract_trase_regions/secrets.yml` and add your credentials for the database there. Remember to keep these credentials safe and **never commit them**.
 
 ## Usage
 
@@ -108,11 +106,17 @@ The command output will indicate if a file is still too large.
 npm run simplify
 ```
 
-## Copy to S3
+Once you have generated the data, copy it to S3 so that it can be read, and issue a cache invalidation to ensure that the changes are immediately visible to website visitors:
 
+```bash
 aws s3 sync ./data/ s3://resources.trase.earth/data/trase-regions/ --exclude ".DS_Store"
 aws cloudfront create-invalidation --distribution-id ES06N5GMZ1GUS --paths "/data/trase-regions/*"
+```
+
+> [!NOTE]
+> All websites, be it production, staging or review all read from http://resources.trase.earth
 
 ## To-do
 
 - [ ] Use Github Actions to run automatically
+- [ ] Alter staging and review websites to read from other S3 buckets
