@@ -82,14 +82,6 @@ poetry env use 3.11
 poetry install
 ```
 
-For simplify-geometries script:
-
-```
-nvm install
-nvm use
-npm install
-```
-
 ---
 
 Make a copy of `secrets.yml.sample` as `secrets.yml` and add your credentials for the database there. Remember to keep these credentials safe and **never commit them**.
