@@ -1,3 +1,5 @@
+import sys
+import traceback
 from pathlib import Path
 from argparse import ArgumentParser
 import json
@@ -17,11 +19,6 @@ from helpers.constants import (
     REPO_FILES_URL,
 )
 
-parser = ArgumentParser()
-parser.add_argument("--country_codes", type=str, nargs="+", required=False,
-                    help="Country codes to process, leave empty for all")
-
-args = parser.parse_args()
 
 
 def generate_filename(country_code, level):
@@ -60,19 +57,42 @@ def save_regions_metadata(df):
 
 
 if __name__ == "__main__":
+    parser = ArgumentParser()
+    parser.add_argument("--country_codes", type=str, nargs="+", required=False,
+                        help="Country codes to process, leave empty for all")
+
+    args = parser.parse_args()
+
     print("---> getting metadata for all regions")
     countries_data = run_sql_return_df(regions_dictionary_query())
     save_regions_metadata(countries_data)
     if args.country_codes:
         countries_data = countries_data[countries_data[COUNTRY_CODE_COL].isin(args.country_codes)]
     print(f'---> regions to process {countries_data}')
+
+    success = True
     for index, row in countries_data.iterrows():
         try:
             extract_and_save_data(row)
         except Exception as e:
-            print(f"---> error: {e}")
+            print(f"---> error: {e}", file=sys.stderr)
+            traceback.print_exc()
+            success = False
+
     levels = countries_data.level.unique()
+
     print("---> combining data for each level into a single file")
     for level in levels:
-        combine_data(level, OUT_FOLDER)
-    print("---> all done.")
+        if level is not None:
+            try:
+                combine_data(level, OUT_FOLDER)
+            except Exception as e:
+                print(f"---> error: {e}", file=sys.stderr)
+                traceback.print_exc()
+                success = False
+
+    if success:
+        print("---> all done ✅")
+    else:
+        print("---> errors occurred 🚨", file=sys.stderr)
+        sys.exit(1)
