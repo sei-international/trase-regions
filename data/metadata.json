@@ -365,7 +365,7 @@
         "level": "3",
         "node_type_slug": "province",
         "node_type_name": "Province",
-        "regions_count": 34,
+        "regions_count": 38,
         "path_geojson": "https://resources.trase.earth/data/trase-regions/id/province.geojson",
         "path_topojson": "https://resources.trase.earth/data/trase-regions/id/province.topo.json"
     },
