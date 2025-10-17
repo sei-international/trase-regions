@@ -31,14 +31,9 @@ def extract_and_save_data(row):
     country_name = row[COUNTRY_NAME_COL]
     country_code = row[COUNTRY_CODE_COL]
     level = row[LEVEL_COL]
-    if not (level == 4 or level == "4" or level == "kabupaten"):
-        return
-
     print(f"---> {country_name}: getting level {level} data")
-    query = generate_geojson_query(country_name, level)
-    print(query)
     result = run_sql_return_df(
-         query
+                generate_geojson_query(country_name, level)
              ).iat[0, 0]  # get first row first column
 
     filename = generate_filename(country_code, level)
@@ -88,7 +83,7 @@ if __name__ == "__main__":
 
     print("---> combining data for each level into a single file")
     for level in levels:
-        if level == 4 or level == "4":
+        if level is not None:
             try:
                 combine_data(level, OUT_FOLDER)
             except Exception as e:
