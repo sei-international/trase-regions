@@ -19,7 +19,9 @@ WITH {cte_table_name} AS (
         r.{LEVEL_COL},
         p.name AS parent_name,
         p.{LEVEL_NAME_COL} AS parent_{LEVEL_NAME_COL},
-        r.{GEOMETRY_COL} AS geometry
+        r.{GEOMETRY_COL} AS geometry,
+        r.year_start,
+        r.year_end
     FROM views.regions AS r
     LEFT JOIN views.regions AS p
         ON p.trase_id =
@@ -85,6 +87,8 @@ def generate_geojson_query(country_name, level):
         WHERE geometry IS NOT NULL
             AND "{LEVEL_COL}" = '{level}'
             AND country = '{country_name.replace("'", "''")}'
+            and coalesce(year_start, 0) <= 2023
+            and coalesce(year_end, 9999) > 2023
         ) r
     ) as t
     """

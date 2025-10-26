@@ -31,6 +31,8 @@ def extract_and_save_data(row):
     country_name = row[COUNTRY_NAME_COL]
     country_code = row[COUNTRY_CODE_COL]
     level = row[LEVEL_COL]
+    if level != 'wood-pulp-concession':
+        return
     print(f"---> {country_name}: getting level {level} data")
     result = run_sql_return_df(
                 generate_geojson_query(country_name, level)
@@ -68,7 +70,7 @@ if __name__ == "__main__":
     save_regions_metadata(countries_data)
     if args.country_codes:
         countries_data = countries_data[countries_data[COUNTRY_CODE_COL].isin(args.country_codes)]
-    print(f'---> regions to process {countries_data}')
+    print(f'---> regions to process\n{countries_data}')
 
     success = True
     for index, row in countries_data.iterrows():
@@ -79,20 +81,3 @@ if __name__ == "__main__":
             traceback.print_exc()
             success = False
 
-    levels = countries_data.level.unique()
-
-    print("---> combining data for each level into a single file")
-    for level in levels:
-        if level is not None:
-            try:
-                combine_data(level, OUT_FOLDER)
-            except Exception as e:
-                print(f"---> error: {e}", file=sys.stderr)
-                traceback.print_exc()
-                success = False
-
-    if success:
-        print("---> all done ✅")
-    else:
-        print("---> errors occurred 🚨", file=sys.stderr)
-        sys.exit(1)
