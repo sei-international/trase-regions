@@ -375,7 +375,7 @@
         "level": "4",
         "node_type_slug": "kabupaten",
         "node_type_name": "Kabupaten",
-        "regions_count": 544,
+        "regions_count": 514,
         "path_geojson": "https://resources.trase.earth/data/trase-regions/id/kabupaten.geojson",
         "path_topojson": "https://resources.trase.earth/data/trase-regions/id/kabupaten.topo.json"
     },
@@ -405,7 +405,7 @@
         "level": null,
         "node_type_slug": "wood-pulp-concession",
         "node_type_name": "Wood pulp concession",
-        "regions_count": 91,
+        "regions_count": 325,
         "path_geojson": "https://resources.trase.earth/data/trase-regions/id/wood-pulp-concession.geojson",
         "path_topojson": "https://resources.trase.earth/data/trase-regions/id/wood-pulp-concession.topo.json"
     },
