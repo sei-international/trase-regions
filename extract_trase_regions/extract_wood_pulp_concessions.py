@@ -1,11 +1,10 @@
-import pandas as pd
 import geopandas as gpd
+import pandas as pd
 import pyproj
-from shapely.ops import transform
-
 from helpers.constants import GEOJSON_EXTENSION
-from helpers.files import generate_filename, write_topojson
 from helpers.db import run_sql_return_df
+from helpers.files import generate_filename, write_topojson
+from shapely.ops import transform
 
 SHAPEFILE_3_0_PATH = "/tmp/ID_pulpwood_concessions_3_0.shp"  # 2015-2019
 SHAPEFILE_3_1_PATH = "/tmp/ID_pulpwood_concessions_3_1.shp"  # 2020-2022
@@ -18,6 +17,16 @@ INDONESIA_BOUNDS = {
     "min_lat": -11.1,
     "max_lat": 6.1,
 }
+
+
+def check_bounds(geom):
+    minx, miny, maxx, maxy = geom.bounds
+    return (
+        minx >= INDONESIA_BOUNDS["min_lon"]
+        and maxx <= INDONESIA_BOUNDS["max_lon"]
+        and miny >= INDONESIA_BOUNDS["min_lat"]
+        and maxy <= INDONESIA_BOUNDS["max_lat"]
+    )
 
 
 def read_shapefile(path, name_column, province_code_column):
@@ -51,7 +60,6 @@ def read_shapefile(path, name_column, province_code_column):
             print(f"ERROR reprojecting geometry: {e}")
             return None
 
-    # 2. Select, Rename, and Reproject
     # Create the output GeoDataFrame, using the original geometry column initially
     gdf_out = gdf[["geometry", "ID", name_column, province_code_column]].copy()
 
@@ -61,6 +69,13 @@ def read_shapefile(path, name_column, province_code_column):
 
     # Set the CRS of the new geometry column explicitly
     gdf_out.crs = target_crs
+
+    # check no null geometry
+    assert gdf_out["geometry"].notnull().all()
+
+    # assert all points are inside Indonesia - this tests our reprojection worked
+    is_in_indonesia = gdf_out["geometry"].apply(check_bounds).fillna(True)
+    assert all(is_in_indonesia)
 
     # Rename columns
     gdf_out = gdf_out.rename(
@@ -72,51 +87,24 @@ def read_shapefile(path, name_column, province_code_column):
         errors="raise",
     )
 
-    # 3. Clean up data (province code cast)
-    # Ensure any rows where geometry failed/is null are kept if data is needed
-    gdf_out["province_code"] = pd.to_numeric(gdf_out["province_code"], errors='coerce').astype('Int64')
-
-    # check no null geometry
-    assert gdf_out["id"].notnull().all()
+    gdf_out["province_code"] = pd.to_numeric(
+        gdf_out["province_code"], errors="coerce"
+    ).astype("Int64")
 
     return gdf_out
 
 
-def append_missing(df1, df2):
-    existing_ids = set(df1["id"])
-    missing_rows = df2[~df2["id"].isin(existing_ids)]
-    return pd.concat([df1, missing_rows], ignore_index=True)
-
-
-def coordinates(geojson_dictionary):
-    _type = geojson_dictionary.get("type")
-    coordinates = geojson_dictionary.get("coordinates", [])
-    if _type == "MultiPolygon":
-        for polygon in coordinates:
-            for ring in polygon:
-                for lon, lat in ring:
-                    yield lon, lat
-    elif _type == "Polygon":
-        for ring in coordinates:
-            for lon, lat in ring:
-                yield lon, lat
-    else:
-        raise NotImplementedError(f"Cannot support {_type}")
-
-
-def is_in_indonesia(lon, lat):
-    return (INDONESIA_BOUNDS["min_lon"] <= lon <= INDONESIA_BOUNDS["max_lon"]) and (
-        INDONESIA_BOUNDS["min_lat"] <= lat <= INDONESIA_BOUNDS["max_lat"]
-    )
-
-
 def process_concessions(df, df_provinces):
-    df["id"] = "ID-WOOD-CONCESSION-" + df['id'].str.replace('H-', '')
-    df["biome"] = None
-    df["country"] = "INDONESIA"
-    df["node_type_name"] = "Wood pulp concession"
-    df["node_type_slug"] = "wood-pulp-concession"
-    df["parent_node_type_name"] = "Province"
+    trase_id = "ID-WOOD-CONCESSION-" + df["id"].str.replace("H-", "")
+    new_columns = {
+        "trase_id": trase_id,
+        "biome": None,
+        "country": "INDONESIA",
+        "node_type_name": "Wood pulp concession",
+        "node_type_slug": "wood-pulp-concession",
+        "parent_node_type_name": "Province",
+    }
+    df = df.assign(**new_columns)
 
     # add province (parent) names
     df = pd.merge(
@@ -124,25 +112,20 @@ def process_concessions(df, df_provinces):
         df_provinces[["province_code", "parent_name"]],
         on="province_code",
         validate="many_to_one",
-        how="left"
+        how="left",
     )
     assert not any(df["parent_name"].isnull()), "Could not find some provinces"
 
-    return df[[
-        "id",
-        "biome",
-        "name",
-        "country",
-        "parent_name",
-        "node_type_name",
-        "node_type_slug",
-        "parent_node_type_name",
-        "geometry",
-    ]]
+    return df[[*new_columns.keys(), "name", "parent_name", "geometry"]]
 
 
 def write_data(df, filename):
-    df.to_file(f"{filename}.{GEOJSON_EXTENSION}", driver="GeoJSON")
+    df = df.assign(id=df["trase_id"])
+    df.to_file(
+        f"{filename}.{GEOJSON_EXTENSION}",
+        driver="GeoJSON",
+        layer_options={"ID_FIELD": "id"},
+    )
     print(f"---> saving {filename}.{GEOJSON_EXTENSION}")
 
     write_topojson(filename)
@@ -160,7 +143,7 @@ def write_indonesia_concessions():
         """
     )
 
-    filename = generate_filename("id", "wood-pulp-concession")
+    filename = generate_filename("ID", "wood-pulp-concession")
 
     d = read_shapefile(SHAPEFILE_3_0_PATH, "NAMOBJ", "Kode_Prov")
     df_3_0 = process_concessions(d, df_provinces)
