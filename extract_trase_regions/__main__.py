@@ -3,6 +3,7 @@ import traceback
 from pathlib import Path
 from argparse import ArgumentParser
 import json
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 from helpers.json import save_geojson_to_file, save_topojson_to_file
 from helpers.topo import load_gdf_from_file, gdf_to_topojson
@@ -18,6 +19,7 @@ from helpers.constants import (
     LEVEL_COL,
     REPO_FILES_URL,
 )
+MAX_WORKERS = 6
 
 
 
@@ -56,6 +58,14 @@ def save_regions_metadata(df):
         json.dump(json.loads(out), f, ensure_ascii=False, indent=4)
 
 
+def process_row_in_parallel(row):
+    try:
+        extract_and_save_data(row)
+    except Exception as e:
+        print(f"---> error: {e}", file=sys.stderr)
+        traceback.print_exc()
+
+
 if __name__ == "__main__":
     parser = ArgumentParser()
     parser.add_argument("--country_codes", type=str, nargs="+", required=False,
@@ -71,13 +81,13 @@ if __name__ == "__main__":
     print(f'---> regions to process {countries_data}')
 
     success = True
-    for index, row in countries_data.iterrows():
-        try:
-            extract_and_save_data(row)
-        except Exception as e:
-            print(f"---> error: {e}", file=sys.stderr)
-            traceback.print_exc()
-            success = False
+    # Create a ThreadPoolExecutor to parallelize data extraction with a maximum of 6 workers
+    with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
+        futures = [executor.submit(process_row_in_parallel, row) for index, row in countries_data.iterrows()]
+
+        for future in as_completed(futures):
+            if future.exception() is not None:
+                success = False
 
     levels = countries_data.level.unique()
 
