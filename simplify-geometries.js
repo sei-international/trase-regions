@@ -52,7 +52,7 @@ const simplifyGeometriesIfTooLarge = async (filePath, format, extension) => {
 
   try {
     await mapshaper.runCommands(
-      `-i ${filePath} -simplify visvalingam percentage=0.01 keep-shapes -snap -clean -o precision=0.00001 ${folderPath} target=* force format=${format} extension=${extension}`
+      `-i ${filePath} -simplify visvalingam percentage=0.01 keep-shapes -snap -o precision=0.00001 ${folderPath} target=* force format=${format} extension=${extension}`
     );
   } catch (error) {
     console.error(`Error simplifying ${filePath}: ${error.message}`);
