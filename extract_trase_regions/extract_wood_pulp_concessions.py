@@ -94,7 +94,7 @@ def read_shapefile(path, name_column, province_code_column):
     return gdf_out
 
 
-def process_concessions(df, df_provinces):
+def process_concessions(df, df_provinces, names: dict):
     trase_id = "ID-WOOD-CONCESSION-" + df["id"].str.replace("H-", "")
     new_columns = {
         "trase_id": trase_id,
@@ -105,6 +105,11 @@ def process_concessions(df, df_provinces):
         "parent_node_type_name": "Province",
     }
     df = df.assign(**new_columns)
+
+    # fix concession names
+    new_names = df["trase_id"].map(names)
+    assert new_names.notnull().all(), "Missing some names!"
+    df["name"] = new_names
 
     # add province (parent) names
     df = pd.merge(
@@ -132,6 +137,7 @@ def write_data(df, filename):
 
 
 def write_indonesia_concessions():
+    # read province codes and names
     df_provinces = run_sql_return_df(
         """
         SELECT 
@@ -143,18 +149,26 @@ def write_indonesia_concessions():
         """
     )
 
+    # read chosen frontend names for concessions
+    df_names = pd.read_csv(
+        "s3://trase-storage/indonesia/wood_pulp/companies/align_names/ALIGNED_NAMES_HTI_V2025.csv",
+        usecols=["ID", "CONC_FRONTEND"],
+    )
+    names = {trase_id: name for (_, trase_id, name) in df_names.itertuples()}
+
+    # read concessions data
     filename = generate_filename("ID", "wood-pulp-concession")
 
     d = read_shapefile(SHAPEFILE_3_0_PATH, "NAMOBJ", "Kode_Prov")
-    df_3_0 = process_concessions(d, df_provinces)
+    df_3_0 = process_concessions(d, df_provinces, names)
     write_data(df_3_0, filename + "-2019")
 
     d = read_shapefile(SHAPEFILE_3_1_PATH, "namaobj", "kode_prov")
-    df_3_1 = process_concessions(d, df_provinces)
+    df_3_1 = process_concessions(d, df_provinces, names)
     write_data(df_3_1, filename + "-2020")
 
     d = read_shapefile(SHAPEFILE_3_2_PATH, "namobj", "kode_prov")
-    df_3_2 = process_concessions(d, df_provinces)
+    df_3_2 = process_concessions(d, df_provinces, names)
     write_data(df_3_2, filename + "-2023")
 
 
