@@ -82,7 +82,7 @@ def generate_geojson_query(country_name, level):
             parent_{LEVEL_NAME_COL},
             country
         FROM {cte_table_name}
-        WHERE geometry IS NOT NULL
+        WHERE TRUE
             AND "{LEVEL_COL}" = '{level}'
             AND country = '{country_name.replace("'", "''")}'
         ) r
