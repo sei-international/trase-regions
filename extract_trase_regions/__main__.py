@@ -9,7 +9,7 @@ from helpers.json import save_geojson_to_file, save_topojson_to_file
 from helpers.topo import load_gdf_from_file, gdf_to_topojson
 from helpers.db import run_sql_return_df
 from helpers.queries import regions_dictionary_query, generate_geojson_query
-from helpers.combine_data import combine_data
+# from helpers.combine_data import combine_data
 from helpers.constants import (
     OUT_FOLDER,
     GEOJSON_EXTENSION,
@@ -23,22 +23,24 @@ MAX_WORKERS = 6
 
 
 
-def generate_filename(country_code, level):
-    folder = f"{OUT_FOLDER}/{country_code.lower()}"
-    Path(folder).mkdir(parents=True, exist_ok=True)
-    return f"{folder}/{level}"
+def generate_filename(country_code, level, year_start, year_end):
+    return f"{country_code.lower()}/{level}-{year_start}-{year_end}"
 
 
 def extract_and_save_data(row):
     country_name = row[COUNTRY_NAME_COL]
     country_code = row[COUNTRY_CODE_COL]
+    year_start = str(int(row.year_start))
+    year_end = str(int(row.year_end))
     level = row[LEVEL_COL]
     print(f"---> {country_name}: getting level {level} data")
     result = run_sql_return_df(
-                generate_geojson_query(country_name, level)
+                generate_geojson_query(country_name, level, year_start, year_end)
              ).iat[0, 0]  # get first row first column
 
-    filename = generate_filename(country_code, level)
+    folder = f"{OUT_FOLDER}/{country_code.lower()}"
+    Path(folder).mkdir(parents=True, exist_ok=True)
+    filename = f"{OUT_FOLDER}/{generate_filename(country_code, level, year_start, year_end)}"
     # geojson
     save_geojson_to_file(result, filename)
     # topojson
@@ -48,10 +50,18 @@ def extract_and_save_data(row):
 
 
 def save_regions_metadata(df):
-    df_tmp = df
+    df_tmp = df.copy()
     base_path = f"{REPO_FILES_URL}/"
-    df_tmp["path_geojson"] = base_path + df[COUNTRY_CODE_COL].str.lower() + "/" + df[LEVEL_COL].astype(str) + f".{GEOJSON_EXTENSION}"
-    df_tmp["path_topojson"] = base_path + df[COUNTRY_CODE_COL].str.lower() + "/" + df[LEVEL_COL].astype(str) + f".{TOPOJSON_EXTENSION}"
+    df["path_geojson"] = df.apply(
+        lambda row: base_path + generate_filename(
+            row[COUNTRY_CODE_COL],
+            row[LEVEL_COL],
+            str(row["year_start"]),
+            str(row["year_end"])
+        ) + f".{GEOJSON_EXTENSION}",
+        axis=1
+    )
+    df_tmp["path_topojson"] = df["path_geojson"].str.replace(GEOJSON_EXTENSION, TOPOJSON_EXTENSION)
     # need to do the following so pandas won't escape forward slashes in URLs
     out = df_tmp.to_json(orient="records")
     with open(f"{OUT_FOLDER}/metadata.json", "w") as f:
@@ -74,7 +84,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     print("---> getting metadata for all regions")
-    countries_data = run_sql_return_df(regions_dictionary_query())
+    countries_data = run_sql_return_df(regions_dictionary_query())    
     save_regions_metadata(countries_data)
     if args.country_codes:
         countries_data = countries_data[countries_data[COUNTRY_CODE_COL].isin(args.country_codes)]
@@ -89,17 +99,16 @@ if __name__ == "__main__":
             if future.exception() is not None:
                 success = False
 
-    levels = countries_data.level.unique()
-
-    print("---> combining data for each level into a single file")
-    for level in levels:
-        if level is not None:
-            try:
-                combine_data(level, OUT_FOLDER)
-            except Exception as e:
-                print(f"---> error: {e}", file=sys.stderr)
-                traceback.print_exc()
-                success = False
+    # levels = countries_data.level.unique()
+    # print("---> combining data for each level into a single file")
+    # for level in levels:
+    #     if level is not None:
+    #         try:
+    #             combine_data(level, OUT_FOLDER)
+    #         except Exception as e:
+    #             print(f"---> error: {e}", file=sys.stderr)
+    #             traceback.print_exc()
+    #             success = False
 
     if success:
         print("---> all done ✅")
