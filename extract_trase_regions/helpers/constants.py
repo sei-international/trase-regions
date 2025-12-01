@@ -9,6 +9,6 @@ LEVEL_COL = "node_type_slug"
 LEVEL_NAME_COL = "node_type_name"
 GEOMETRY_COL = "_geometry"
 
-REPO_FILES_URL = "https://resources.trase.earth/data/trase-regions"
+REPO_FILES_URL = "https://resources.trase.earth"
 
 SIMPLIFY_DEGREES = "0.003"  # how many degrees to simplify geometry by

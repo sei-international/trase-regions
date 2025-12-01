@@ -3,7 +3,7 @@ name = "extract_trase_regions"
 version = "0.1.0"
 description = "Extracts Trase spatial data and builds it as geojson and topojson"
 authors = ["Bernardo Loureiro"]
-package-mode = false
+package-mode = true
 
 [tool.poetry.dependencies]
 python = "^3.11.0"
