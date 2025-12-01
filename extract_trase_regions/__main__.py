@@ -49,9 +49,12 @@ def extract_and_save_data(row):
 
 def save_regions_metadata(df):
     df_tmp = df
-    base_path = f"{REPO_FILES_URL}/"
-    df_tmp["path_geojson"] = base_path + df[COUNTRY_CODE_COL].str.lower() + "/" + df[LEVEL_COL].astype(str) + f".{GEOJSON_EXTENSION}"
-    df_tmp["path_topojson"] = base_path + df[COUNTRY_CODE_COL].str.lower() + "/" + df[LEVEL_COL].astype(str) + f".{TOPOJSON_EXTENSION}"
+    base_path = f"{REPO_FILES_URL}"
+    folder = "/data/trase-regions/"
+    df_tmp["endpoint_geojson"] = folder + df[COUNTRY_CODE_COL].str.lower() + "/" + df[LEVEL_COL].astype(str) + f".{GEOJSON_EXTENSION}"
+    df_tmp["endpoint_topojson"] = folder + df[COUNTRY_CODE_COL].str.lower() + "/" + df[LEVEL_COL].astype(str) + f".{TOPOJSON_EXTENSION}"
+    df_tmp["path_geojson"] = base_path + df["endpoint_geojson"]
+    df_tmp["path_topojson"] = base_path + df["endpoint_topojson"]
     # need to do the following so pandas won't escape forward slashes in URLs
     out = df_tmp.to_json(orient="records")
     with open(f"{OUT_FOLDER}/metadata.json", "w") as f:
