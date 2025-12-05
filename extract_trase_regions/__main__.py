@@ -1,12 +1,11 @@
 import sys
 import traceback
-from pathlib import Path
 from argparse import ArgumentParser
 import json
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
-from helpers.json import save_geojson_to_file, save_topojson_to_file
-from helpers.topo import load_gdf_from_file, gdf_to_topojson
+from extract_trase_regions.helpers.files import generate_filename, write_topojson
+from helpers.json import save_geojson_to_file
 from helpers.db import run_sql_return_df
 from helpers.queries import regions_dictionary_query, generate_geojson_query
 from helpers.combine_data import combine_data
@@ -22,13 +21,6 @@ from helpers.constants import (
 MAX_WORKERS = 6
 
 
-
-def generate_filename(country_code, level):
-    folder = f"{OUT_FOLDER}/{country_code.lower()}"
-    Path(folder).mkdir(parents=True, exist_ok=True)
-    return f"{folder}/{level}"
-
-
 def extract_and_save_data(row):
     country_name = row[COUNTRY_NAME_COL]
     country_code = row[COUNTRY_CODE_COL]
@@ -39,12 +31,8 @@ def extract_and_save_data(row):
              ).iat[0, 0]  # get first row first column
 
     filename = generate_filename(country_code, level)
-    # geojson
     save_geojson_to_file(result, filename)
-    # topojson
-    gdf = load_gdf_from_file(f'{filename}.{GEOJSON_EXTENSION}')
-    topo = gdf_to_topojson(gdf)
-    save_topojson_to_file(topo, filename)
+    write_topojson(filename)
 
 
 def save_regions_metadata(df):

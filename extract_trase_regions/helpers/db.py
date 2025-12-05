@@ -1,3 +1,5 @@
+import os
+
 import psycopg2
 import pandas.io.sql as sqlio
 
@@ -5,7 +7,8 @@ from helpers.yaml import parse_yaml
 
 
 def run_sql_return_df(query):
-    secrets = parse_yaml("extract_trase_regions/secrets.yml")
+    secrets_path = os.path.join(os.path.dirname(__file__), "../secrets.yml")
+    secrets = parse_yaml(secrets_path)
     USER = secrets["user"]
     PASSWORD = secrets["password"]
     HOST = secrets["host"]
