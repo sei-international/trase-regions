@@ -6,9 +6,9 @@ from helpers.db import run_sql_return_df
 from helpers.files import generate_filename, write_topojson
 from shapely.ops import transform
 
-SHAPEFILE_3_0_PATH = "/tmp/ID_pulpwood_concessions_3_0.shp"  # 2015-2019
-SHAPEFILE_3_1_PATH = "/tmp/ID_pulpwood_concessions_3_1.shp"  # 2020-2022
-SHAPEFILE_3_2_PATH = "/tmp/ID_pulpwood_concessions_3_2.shp"  # 2023-2024
+SHAPEFILE_3_0_PATH = "s3://trase-storage/indonesia/wood_pulp/logistics/out/concessions/ucsb/ID_pulpwood_concessions_3_0.shp"  # 2015-2019
+SHAPEFILE_3_1_PATH = "s3://trase-storage/indonesia/wood_pulp/logistics/out/concessions/ucsb/ID_pulpwood_concessions_3_1.shp"  # 2020-2022
+SHAPEFILE_3_2_PATH = "s3://trase-storage/indonesia/wood_pulp/logistics/out/concessions/ucsb/ID_pulpwood_concessions_3_2.shp"  # 2023-2024
 INDONESIA_BOUNDS = {
     # Bounding box for Indonesia (EPSG:4326), slightly buffered.
     # Approx. 95°E to 141°E, 6°N to 11°S
