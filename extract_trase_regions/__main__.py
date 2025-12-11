@@ -46,8 +46,11 @@ def extract_and_save_data(row):
 def save_regions_metadata(df):
     df_tmp = df.copy()
     base_path = f"{REPO_FILES_URL}/"
-    df["path_geojson"] = df.apply(
-        lambda row: base_path + generate_filename(
+    df_tmp = df
+    base_path = f"{REPO_FILES_URL}"
+    folder = "/data/trase-regions/"
+    df["endpoint_geojson"] = df.apply(
+        lambda row: generate_filename(
             row[COUNTRY_CODE_COL],
             row[LEVEL_COL],
             str(row["year_start"]),
@@ -55,6 +58,7 @@ def save_regions_metadata(df):
         ) + f".{GEOJSON_EXTENSION}",
         axis=1
     )
+    df_tmp["path_geojson"] = base_path + folder + df["endpoint_geojson"]
     # need to do the following so pandas won't escape forward slashes in URLs
     out = df_tmp.to_json(orient="records")
     with open(f"{OUT_FOLDER}/metadata.json", "w") as f:

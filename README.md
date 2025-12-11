@@ -89,11 +89,10 @@ The command output will indicate if a file is still too large.
 npm run simplify
 ```
 
-Once you have generated the data, copy it to S3 so that it can be read, and issue a cache invalidation to ensure that the changes are immediately visible to website visitors:
+Once you have generated the data, copy it to S3 so that it can be read, and issue a cache invalidation to ensure that the changes are immediately visible to website visitors. You'll need to have aws cli installed:
 
 ```bash
-aws s3 sync ./data/ s3://resources.trase.earth/data/trase-regions/ --exclude ".DS_Store"
-aws cloudfront create-invalidation --distribution-id ES06N5GMZ1GUS --paths "/data/trase-regions/*"
+poetry run upload production # or staging or review
 ```
 
 > [!NOTE]
