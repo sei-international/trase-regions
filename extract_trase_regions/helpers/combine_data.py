@@ -2,12 +2,15 @@ import geopandas as gpd
 import glob
 from pathlib import Path
 import pandas as pd
+from helpers.constants import (
+    GEOJSON_EXTENSION,
+)
 
 
 def combine_data(level, OUT_FOLDER):
     print(f"---> combining data for level: {level}")
     files = [
-        f for f in glob.glob(f"{OUT_FOLDER}/**/{level}*.geojson")
+        f for f in glob.glob(f"{OUT_FOLDER}/**/{level}*.{GEOJSON_EXTENSION}")
         if "/all/" not in f  # ignore /all/ folder files
     ]
     print(f"---> files found {files}")
@@ -22,4 +25,4 @@ def combine_data(level, OUT_FOLDER):
     Path(folder).mkdir(parents=True, exist_ok=True)
     filename = f"{folder}/{level}"
     print(f"---> saving to {filename}")
-    df.to_file(f"{filename}.geojson", driver="GeoJSON")
+    df.to_file(f"{filename}.{GEOJSON_EXTENSION}", driver="GeoJSON")
