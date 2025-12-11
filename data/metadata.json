@@ -8,8 +8,8 @@
         "year_start": 1,
         "year_end": 9999,
         "regions_count": 1,
-        "endpoint_geojson": "ar/country-1-9999.geojson",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/ar/country-1-9999.geojson"
+        "endpoint_geojson": "ar/country-1-9999.geo.json",
+        "path_geojson": "https://resouoperces.trase.earth/data/trase-regions/ar/country-1-9999.geo.json"
     },
     {
         "country": "ARGENTINA",
@@ -20,8 +20,8 @@
         "year_start": 1,
         "year_end": 9999,
         "regions_count": 24,
-        "endpoint_geojson": "ar/province-1-9999.geojson",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/ar/province-1-9999.geojson"
+        "endpoint_geojson": "ar/province-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/ar/province-1-9999.geo.json"
     },
     {
         "country": "ARGENTINA",
@@ -32,8 +32,8 @@
         "year_start": 1,
         "year_end": 9999,
         "regions_count": 527,
-        "endpoint_geojson": "ar/department-1-9999.geojson",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/ar/department-1-9999.geojson"
+        "endpoint_geojson": "ar/department-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/ar/department-1-9999.geo.json"
     },
     {
         "country": "ARGENTINA",
@@ -44,8 +44,8 @@
         "year_start": 1,
         "year_end": 9999,
         "regions_count": 15,
-        "endpoint_geojson": "ar/biome-1-9999.geojson",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/ar/biome-1-9999.geojson"
+        "endpoint_geojson": "ar/biome-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/ar/biome-1-9999.geo.json"
     },
     {
         "country": "BOLIVIA",
@@ -56,8 +56,8 @@
         "year_start": 1,
         "year_end": 9999,
         "regions_count": 1,
-        "endpoint_geojson": "bo/country-1-9999.geojson",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/bo/country-1-9999.geojson"
+        "endpoint_geojson": "bo/country-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/bo/country-1-9999.geo.json"
     },
     {
         "country": "BOLIVIA",
@@ -68,8 +68,8 @@
         "year_start": 1,
         "year_end": 9999,
         "regions_count": 9,
-        "endpoint_geojson": "bo/department-1-9999.geojson",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/bo/department-1-9999.geojson"
+        "endpoint_geojson": "bo/department-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/bo/department-1-9999.geo.json"
     },
     {
         "country": "BOLIVIA",
@@ -80,8 +80,8 @@
         "year_start": 1,
         "year_end": 9999,
         "regions_count": 112,
-        "endpoint_geojson": "bo/province-1-9999.geojson",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/bo/province-1-9999.geojson"
+        "endpoint_geojson": "bo/province-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/bo/province-1-9999.geo.json"
     },
     {
         "country": "BOLIVIA",
@@ -92,8 +92,8 @@
         "year_start": 1,
         "year_end": 9999,
         "regions_count": 339,
-        "endpoint_geojson": "bo/municipality-1-9999.geojson",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/bo/municipality-1-9999.geojson"
+        "endpoint_geojson": "bo/municipality-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/bo/municipality-1-9999.geo.json"
     },
     {
         "country": "BRAZIL",
@@ -104,8 +104,8 @@
         "year_start": 1,
         "year_end": 9999,
         "regions_count": 1,
-        "endpoint_geojson": "br/country-1-9999.geojson",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/br/country-1-9999.geojson"
+        "endpoint_geojson": "br/country-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/br/country-1-9999.geo.json"
     },
     {
         "country": "BRAZIL",
@@ -116,8 +116,8 @@
         "year_start": 1,
         "year_end": 9999,
         "regions_count": 5,
-        "endpoint_geojson": "br/region-1-9999.geojson",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/br/region-1-9999.geojson"
+        "endpoint_geojson": "br/region-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/br/region-1-9999.geo.json"
     },
     {
         "country": "BRAZIL",
@@ -128,8 +128,8 @@
         "year_start": 1,
         "year_end": 9999,
         "regions_count": 27,
-        "endpoint_geojson": "br/state-1-9999.geojson",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/br/state-1-9999.geojson"
+        "endpoint_geojson": "br/state-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/br/state-1-9999.geo.json"
     },
     {
         "country": "BRAZIL",
@@ -140,8 +140,8 @@
         "year_start": 1,
         "year_end": 9999,
         "regions_count": 137,
-        "endpoint_geojson": "br/mesoregion-1-9999.geojson",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/br/mesoregion-1-9999.geojson"
+        "endpoint_geojson": "br/mesoregion-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/br/mesoregion-1-9999.geo.json"
     },
     {
         "country": "BRAZIL",
@@ -152,8 +152,8 @@
         "year_start": 1,
         "year_end": 9999,
         "regions_count": 558,
-        "endpoint_geojson": "br/microregion-1-9999.geojson",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/br/microregion-1-9999.geojson"
+        "endpoint_geojson": "br/microregion-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/br/microregion-1-9999.geo.json"
     },
     {
         "country": "BRAZIL",
@@ -164,8 +164,8 @@
         "year_start": 1,
         "year_end": 9999,
         "regions_count": 5570,
-        "endpoint_geojson": "br/municipality-1-9999.geojson",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/br/municipality-1-9999.geojson"
+        "endpoint_geojson": "br/municipality-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/br/municipality-1-9999.geo.json"
     },
     {
         "country": "BRAZIL",
@@ -176,8 +176,8 @@
         "year_start": 1,
         "year_end": 9999,
         "regions_count": 6,
-        "endpoint_geojson": "br/biome-1-9999.geojson",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/br/biome-1-9999.geojson"
+        "endpoint_geojson": "br/biome-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/br/biome-1-9999.geo.json"
     },
     {
         "country": "BRAZIL",
@@ -188,8 +188,8 @@
         "year_start": 1,
         "year_end": 9999,
         "regions_count": 29,
-        "endpoint_geojson": "wp/port-1-9999.geojson",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/wp/port-1-9999.geojson"
+        "endpoint_geojson": "wp/port-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/wp/port-1-9999.geo.json"
     },
     {
         "country": "COLOMBIA",
@@ -200,8 +200,8 @@
         "year_start": 1,
         "year_end": 9999,
         "regions_count": 1,
-        "endpoint_geojson": "co/country-1-9999.geojson",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/co/country-1-9999.geojson"
+        "endpoint_geojson": "co/country-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/co/country-1-9999.geo.json"
     },
     {
         "country": "COLOMBIA",
@@ -212,8 +212,8 @@
         "year_start": 1,
         "year_end": 9999,
         "regions_count": 33,
-        "endpoint_geojson": "co/department-1-9999.geojson",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/co/department-1-9999.geojson"
+        "endpoint_geojson": "co/department-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/co/department-1-9999.geo.json"
     },
     {
         "country": "COLOMBIA",
@@ -224,8 +224,8 @@
         "year_start": 1,
         "year_end": 9999,
         "regions_count": 1122,
-        "endpoint_geojson": "co/municipality-1-9999.geojson",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/co/municipality-1-9999.geojson"
+        "endpoint_geojson": "co/municipality-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/co/municipality-1-9999.geo.json"
     },
     {
         "country": "COLOMBIA",
@@ -236,8 +236,8 @@
         "year_start": 1,
         "year_end": 9999,
         "regions_count": 3,
-        "endpoint_geojson": "wp/port-1-9999.geojson",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/wp/port-1-9999.geojson"
+        "endpoint_geojson": "wp/port-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/wp/port-1-9999.geo.json"
     },
     {
         "country": "COTE D'IVOIRE",
@@ -248,8 +248,8 @@
         "year_start": 1,
         "year_end": 9999,
         "regions_count": 1,
-        "endpoint_geojson": "ci/country-1-9999.geojson",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/ci/country-1-9999.geojson"
+        "endpoint_geojson": "ci/country-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/ci/country-1-9999.geo.json"
     },
     {
         "country": "COTE D'IVOIRE",
@@ -260,8 +260,8 @@
         "year_start": 1,
         "year_end": 9999,
         "regions_count": 14,
-        "endpoint_geojson": "ci/district-1-9999.geojson",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/ci/district-1-9999.geojson"
+        "endpoint_geojson": "ci/district-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/ci/district-1-9999.geo.json"
     },
     {
         "country": "COTE D'IVOIRE",
@@ -272,8 +272,8 @@
         "year_start": 1,
         "year_end": 9999,
         "regions_count": 33,
-        "endpoint_geojson": "ci/region-1-9999.geojson",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/ci/region-1-9999.geojson"
+        "endpoint_geojson": "ci/region-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/ci/region-1-9999.geo.json"
     },
     {
         "country": "COTE D'IVOIRE",
@@ -284,8 +284,8 @@
         "year_start": 1,
         "year_end": 9999,
         "regions_count": 108,
-        "endpoint_geojson": "ci/department-1-9999.geojson",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/ci/department-1-9999.geojson"
+        "endpoint_geojson": "ci/department-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/ci/department-1-9999.geo.json"
     },
     {
         "country": "ECUADOR",
@@ -296,8 +296,8 @@
         "year_start": 1,
         "year_end": 9999,
         "regions_count": 1,
-        "endpoint_geojson": "ec/country-1-9999.geojson",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/ec/country-1-9999.geojson"
+        "endpoint_geojson": "ec/country-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/ec/country-1-9999.geo.json"
     },
     {
         "country": "ECUADOR",
@@ -308,8 +308,8 @@
         "year_start": 1,
         "year_end": 9999,
         "regions_count": 25,
-        "endpoint_geojson": "ec/province-1-9999.geojson",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/ec/province-1-9999.geojson"
+        "endpoint_geojson": "ec/province-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/ec/province-1-9999.geo.json"
     },
     {
         "country": "ECUADOR",
@@ -320,8 +320,8 @@
         "year_start": 1,
         "year_end": 9999,
         "regions_count": 224,
-        "endpoint_geojson": "ec/canton-1-9999.geojson",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/ec/canton-1-9999.geojson"
+        "endpoint_geojson": "ec/canton-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/ec/canton-1-9999.geo.json"
     },
     {
         "country": "ECUADOR",
@@ -332,8 +332,8 @@
         "year_start": 1,
         "year_end": 9999,
         "regions_count": 1040,
-        "endpoint_geojson": "ec/parish-1-9999.geojson",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/ec/parish-1-9999.geojson"
+        "endpoint_geojson": "ec/parish-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/ec/parish-1-9999.geo.json"
     },
     {
         "country": "GHANA",
@@ -344,8 +344,8 @@
         "year_start": 1,
         "year_end": 9999,
         "regions_count": 1,
-        "endpoint_geojson": "gh/country-1-9999.geojson",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/gh/country-1-9999.geojson"
+        "endpoint_geojson": "gh/country-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/gh/country-1-9999.geo.json"
     },
     {
         "country": "GHANA",
@@ -356,8 +356,8 @@
         "year_start": 1,
         "year_end": 9999,
         "regions_count": 16,
-        "endpoint_geojson": "gh/region-1-9999.geojson",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/gh/region-1-9999.geojson"
+        "endpoint_geojson": "gh/region-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/gh/region-1-9999.geo.json"
     },
     {
         "country": "GHANA",
@@ -368,8 +368,8 @@
         "year_start": 1,
         "year_end": 9999,
         "regions_count": 260,
-        "endpoint_geojson": "gh/district-1-9999.geojson",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/gh/district-1-9999.geojson"
+        "endpoint_geojson": "gh/district-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/gh/district-1-9999.geo.json"
     },
     {
         "country": "INDIA",
@@ -380,8 +380,8 @@
         "year_start": 1,
         "year_end": 9999,
         "regions_count": 4,
-        "endpoint_geojson": "wp/port-1-9999.geojson",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/wp/port-1-9999.geojson"
+        "endpoint_geojson": "wp/port-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/wp/port-1-9999.geo.json"
     },
     {
         "country": "INDONESIA",
@@ -392,8 +392,8 @@
         "year_start": 1,
         "year_end": 9999,
         "regions_count": 1,
-        "endpoint_geojson": "id/country-1-9999.geojson",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/id/country-1-9999.geojson"
+        "endpoint_geojson": "id/country-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/id/country-1-9999.geo.json"
     },
     {
         "country": "INDONESIA",
@@ -404,8 +404,8 @@
         "year_start": 1,
         "year_end": 9999,
         "regions_count": 38,
-        "endpoint_geojson": "id/province-1-9999.geojson",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/id/province-1-9999.geojson"
+        "endpoint_geojson": "id/province-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/id/province-1-9999.geo.json"
     },
     {
         "country": "INDONESIA",
@@ -416,8 +416,8 @@
         "year_start": 1,
         "year_end": 9999,
         "regions_count": 514,
-        "endpoint_geojson": "id/kabupaten-1-9999.geojson",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/id/kabupaten-1-9999.geojson"
+        "endpoint_geojson": "id/kabupaten-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/id/kabupaten-1-9999.geo.json"
     },
     {
         "country": "INDONESIA",
@@ -428,8 +428,8 @@
         "year_start": 1,
         "year_end": 9999,
         "regions_count": 11891,
-        "endpoint_geojson": "id/palm-oil-concession-1-9999.geojson",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/id/palm-oil-concession-1-9999.geojson"
+        "endpoint_geojson": "id/palm-oil-concession-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/id/palm-oil-concession-1-9999.geo.json"
     },
     {
         "country": "INDONESIA",
@@ -440,8 +440,8 @@
         "year_start": 1,
         "year_end": 9999,
         "regions_count": 159,
-        "endpoint_geojson": "id/port-1-9999.geojson",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/id/port-1-9999.geojson"
+        "endpoint_geojson": "id/port-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/id/port-1-9999.geo.json"
     },
     {
         "country": "INDONESIA",
@@ -452,8 +452,8 @@
         "year_start": 1,
         "year_end": 2019,
         "regions_count": 301,
-        "endpoint_geojson": "id/wood-pulp-concession-1-2019.geojson",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/id/wood-pulp-concession-1-2019.geojson"
+        "endpoint_geojson": "id/wood-pulp-concession-1-2019.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/id/wood-pulp-concession-1-2019.geo.json"
     },
     {
         "country": "INDONESIA",
@@ -464,8 +464,8 @@
         "year_start": 2020,
         "year_end": 2022,
         "regions_count": 306,
-        "endpoint_geojson": "id/wood-pulp-concession-2020-2022.geojson",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/id/wood-pulp-concession-2020-2022.geojson"
+        "endpoint_geojson": "id/wood-pulp-concession-2020-2022.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/id/wood-pulp-concession-2020-2022.geo.json"
     },
     {
         "country": "INDONESIA",
@@ -476,8 +476,8 @@
         "year_start": 2023,
         "year_end": 9999,
         "regions_count": 298,
-        "endpoint_geojson": "id/wood-pulp-concession-2023-9999.geojson",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/id/wood-pulp-concession-2023-9999.geojson"
+        "endpoint_geojson": "id/wood-pulp-concession-2023-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/id/wood-pulp-concession-2023-9999.geo.json"
     },
     {
         "country": "PARAGUAY",
@@ -488,8 +488,8 @@
         "year_start": 1,
         "year_end": 9999,
         "regions_count": 1,
-        "endpoint_geojson": "py/country-1-9999.geojson",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/py/country-1-9999.geojson"
+        "endpoint_geojson": "py/country-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/py/country-1-9999.geo.json"
     },
     {
         "country": "PARAGUAY",
@@ -500,8 +500,8 @@
         "year_start": 1,
         "year_end": 9999,
         "regions_count": 18,
-        "endpoint_geojson": "py/department-1-9999.geojson",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/py/department-1-9999.geojson"
+        "endpoint_geojson": "py/department-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/py/department-1-9999.geo.json"
     },
     {
         "country": "PARAGUAY",
@@ -512,8 +512,8 @@
         "year_start": 1,
         "year_end": 9999,
         "regions_count": 255,
-        "endpoint_geojson": "py/district-1-9999.geojson",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/py/district-1-9999.geojson"
+        "endpoint_geojson": "py/district-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/py/district-1-9999.geo.json"
     },
     {
         "country": "PARAGUAY",
@@ -524,8 +524,8 @@
         "year_start": 1,
         "year_end": 9999,
         "regions_count": 5,
-        "endpoint_geojson": "py/biome-1-9999.geojson",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/py/biome-1-9999.geojson"
+        "endpoint_geojson": "py/biome-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/py/biome-1-9999.geo.json"
     },
     {
         "country": "PERU",
@@ -536,8 +536,8 @@
         "year_start": 1,
         "year_end": 9999,
         "regions_count": 1,
-        "endpoint_geojson": "pe/country-1-9999.geojson",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/pe/country-1-9999.geojson"
+        "endpoint_geojson": "pe/country-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/pe/country-1-9999.geo.json"
     },
     {
         "country": "PERU",
@@ -548,8 +548,8 @@
         "year_start": 1,
         "year_end": 9999,
         "regions_count": 3,
-        "endpoint_geojson": "wp/port-1-9999.geojson",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/wp/port-1-9999.geojson"
+        "endpoint_geojson": "wp/port-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/wp/port-1-9999.geo.json"
     },
     {
         "country": "TANZANIA",
@@ -560,7 +560,7 @@
         "year_start": 1,
         "year_end": 9999,
         "regions_count": 2,
-        "endpoint_geojson": "wp/port-1-9999.geojson",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/wp/port-1-9999.geojson"
+        "endpoint_geojson": "wp/port-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/wp/port-1-9999.geo.json"
     }
 ]
