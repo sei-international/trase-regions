@@ -3,14 +3,11 @@ import glob
 from pathlib import Path
 import pandas as pd
 
-from helpers.json import save_topojson_to_file
-from helpers.topo import gdf_to_topojson
-
 
 def combine_data(level, OUT_FOLDER):
     print(f"---> combining data for level: {level}")
     files = [
-        f for f in glob.glob(f"{OUT_FOLDER}/**/{level}.geojson")
+        f for f in glob.glob(f"{OUT_FOLDER}/**/{level}*.geojson")
         if "/all/" not in f  # ignore /all/ folder files
     ]
     print(f"---> files found {files}")
@@ -26,6 +23,3 @@ def combine_data(level, OUT_FOLDER):
     filename = f"{folder}/{level}"
     print(f"---> saving to {filename}")
     df.to_file(f"{filename}.geojson", driver="GeoJSON")
-
-    topo = gdf_to_topojson(df)
-    save_topojson_to_file(topo, filename)

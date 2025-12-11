@@ -5,15 +5,13 @@ from argparse import ArgumentParser
 import json
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
-from helpers.json import save_geojson_to_file, save_topojson_to_file
-from helpers.topo import load_gdf_from_file, gdf_to_topojson
+from helpers.json import save_geojson_to_file
 from helpers.db import run_sql_return_df
 from helpers.queries import regions_dictionary_query, generate_geojson_query
-# from helpers.combine_data import combine_data
+from helpers.combine_data import combine_data
 from helpers.constants import (
     OUT_FOLDER,
     GEOJSON_EXTENSION,
-    TOPOJSON_EXTENSION,
     COUNTRY_CODE_COL,
     COUNTRY_NAME_COL,
     LEVEL_COL,
@@ -43,10 +41,6 @@ def extract_and_save_data(row):
     filename = f"{OUT_FOLDER}/{generate_filename(country_code, level, year_start, year_end)}"
     # geojson
     save_geojson_to_file(result, filename)
-    # topojson
-    gdf = load_gdf_from_file(f'{filename}.{GEOJSON_EXTENSION}')
-    topo = gdf_to_topojson(gdf)
-    save_topojson_to_file(topo, filename)
 
 
 def save_regions_metadata(df):
@@ -61,7 +55,6 @@ def save_regions_metadata(df):
         ) + f".{GEOJSON_EXTENSION}",
         axis=1
     )
-    df_tmp["path_topojson"] = df["path_geojson"].str.replace(GEOJSON_EXTENSION, TOPOJSON_EXTENSION)
     # need to do the following so pandas won't escape forward slashes in URLs
     out = df_tmp.to_json(orient="records")
     with open(f"{OUT_FOLDER}/metadata.json", "w") as f:
@@ -98,17 +91,19 @@ if __name__ == "__main__":
         for future in as_completed(futures):
             if future.exception() is not None:
                 success = False
+    
+    print(countries_data.iloc[0])
 
-    # levels = countries_data.level.unique()
-    # print("---> combining data for each level into a single file")
-    # for level in levels:
-    #     if level is not None:
-    #         try:
-    #             combine_data(level, OUT_FOLDER)
-    #         except Exception as e:
-    #             print(f"---> error: {e}", file=sys.stderr)
-    #             traceback.print_exc()
-    #             success = False
+    levels = countries_data.node_type_slug.unique()
+    print("---> combining data for each level into a single file")
+    for level in levels:
+        if level is not None:
+            try:
+                combine_data(level, OUT_FOLDER)
+            except Exception as e:
+                print(f"---> error: {e}", file=sys.stderr)
+                traceback.print_exc()
+                success = False
 
     if success:
         print("---> all done ✅")
