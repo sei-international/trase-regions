@@ -1,7 +1,6 @@
 OUT_FOLDER = "data"
 
-GEOJSON_EXTENSION = "geojson"
-TOPOJSON_EXTENSION = "topo.json"
+GEOJSON_EXTENSION = "geo.json"
 
 COUNTRY_CODE_COL = "country_code"
 COUNTRY_NAME_COL = "country"

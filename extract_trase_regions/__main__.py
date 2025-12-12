@@ -5,15 +5,13 @@ from argparse import ArgumentParser
 import json
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
-from helpers.json import save_geojson_to_file, save_topojson_to_file
-from helpers.topo import load_gdf_from_file, gdf_to_topojson
+from helpers.json import save_geojson_to_file
 from helpers.db import run_sql_return_df
 from helpers.queries import regions_dictionary_query, generate_geojson_query
 from helpers.combine_data import combine_data
 from helpers.constants import (
     OUT_FOLDER,
     GEOJSON_EXTENSION,
-    TOPOJSON_EXTENSION,
     COUNTRY_CODE_COL,
     COUNTRY_NAME_COL,
     LEVEL_COL,
@@ -23,38 +21,44 @@ MAX_WORKERS = 6
 
 
 
-def generate_filename(country_code, level):
-    folder = f"{OUT_FOLDER}/{country_code.lower()}"
-    Path(folder).mkdir(parents=True, exist_ok=True)
-    return f"{folder}/{level}"
+def generate_filename(country_code, level, year_start, year_end):
+    return f"{country_code.lower()}/{level}-{year_start}-{year_end}"
 
 
 def extract_and_save_data(row):
     country_name = row[COUNTRY_NAME_COL]
     country_code = row[COUNTRY_CODE_COL]
+    year_start = str(int(row.year_start))
+    year_end = str(int(row.year_end))
     level = row[LEVEL_COL]
     print(f"---> {country_name}: getting level {level} data")
     result = run_sql_return_df(
-                generate_geojson_query(country_name, level)
+                generate_geojson_query(country_name, level, year_start, year_end)
              ).iat[0, 0]  # get first row first column
 
-    filename = generate_filename(country_code, level)
+    folder = f"{OUT_FOLDER}/{country_code.lower()}"
+    Path(folder).mkdir(parents=True, exist_ok=True)
+    filename = f"{OUT_FOLDER}/{generate_filename(country_code, level, year_start, year_end)}"
     # geojson
     save_geojson_to_file(result, filename)
-    # topojson
-    gdf = load_gdf_from_file(f'{filename}.{GEOJSON_EXTENSION}')
-    topo = gdf_to_topojson(gdf)
-    save_topojson_to_file(topo, filename)
 
 
 def save_regions_metadata(df):
+    df_tmp = df.copy()
+    base_path = f"{REPO_FILES_URL}/"
     df_tmp = df
     base_path = f"{REPO_FILES_URL}"
     folder = "/data/trase-regions/"
-    df_tmp["endpoint_geojson"] = df[COUNTRY_CODE_COL].str.lower() + "/" + df[LEVEL_COL].astype(str) + f".{GEOJSON_EXTENSION}"
-    df_tmp["endpoint_topojson"] = df[COUNTRY_CODE_COL].str.lower() + "/" + df[LEVEL_COL].astype(str) + f".{TOPOJSON_EXTENSION}"
+    df["endpoint_geojson"] = df.apply(
+        lambda row: generate_filename(
+            row[COUNTRY_CODE_COL],
+            row[LEVEL_COL],
+            str(row["year_start"]),
+            str(row["year_end"])
+        ) + f".{GEOJSON_EXTENSION}",
+        axis=1
+    )
     df_tmp["path_geojson"] = base_path + folder + df["endpoint_geojson"]
-    df_tmp["path_topojson"] = base_path + folder + df["endpoint_topojson"]
     # need to do the following so pandas won't escape forward slashes in URLs
     out = df_tmp.to_json(orient="records")
     with open(f"{OUT_FOLDER}/metadata.json", "w") as f:
@@ -77,7 +81,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     print("---> getting metadata for all regions")
-    countries_data = run_sql_return_df(regions_dictionary_query())
+    countries_data = run_sql_return_df(regions_dictionary_query())    
     save_regions_metadata(countries_data)
     if args.country_codes:
         countries_data = countries_data[countries_data[COUNTRY_CODE_COL].isin(args.country_codes)]
@@ -91,9 +95,10 @@ if __name__ == "__main__":
         for future in as_completed(futures):
             if future.exception() is not None:
                 success = False
+    
+    print(countries_data.iloc[0])
 
-    levels = countries_data.level.unique()
-
+    levels = countries_data.node_type_slug.unique()
     print("---> combining data for each level into a single file")
     for level in levels:
         if level is not None:

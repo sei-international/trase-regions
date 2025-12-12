@@ -5,11 +5,11 @@
         "level": "1",
         "node_type_slug": "country",
         "node_type_name": "Country",
+        "year_start": 1,
+        "year_end": 9999,
         "regions_count": 1,
-        "endpoint_geojson": "ar/country.geojson",
-        "endpoint_topojson": "ar/country.topo.json",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/ar/country.geojson",
-        "path_topojson": "https://resources.trase.earth/data/trase-regions/ar/country.topo.json"
+        "endpoint_geojson": "ar/country-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/ar/country-1-9999.geo.json"
     },
     {
         "country": "ARGENTINA",
@@ -17,11 +17,11 @@
         "level": "2",
         "node_type_slug": "province",
         "node_type_name": "Province",
+        "year_start": 1,
+        "year_end": 9999,
         "regions_count": 24,
-        "endpoint_geojson": "ar/province.geojson",
-        "endpoint_topojson": "ar/province.topo.json",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/ar/province.geojson",
-        "path_topojson": "https://resources.trase.earth/data/trase-regions/ar/province.topo.json"
+        "endpoint_geojson": "ar/province-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/ar/province-1-9999.geo.json"
     },
     {
         "country": "ARGENTINA",
@@ -29,11 +29,11 @@
         "level": "3",
         "node_type_slug": "department",
         "node_type_name": "Department",
+        "year_start": 1,
+        "year_end": 9999,
         "regions_count": 527,
-        "endpoint_geojson": "ar/department.geojson",
-        "endpoint_topojson": "ar/department.topo.json",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/ar/department.geojson",
-        "path_topojson": "https://resources.trase.earth/data/trase-regions/ar/department.topo.json"
+        "endpoint_geojson": "ar/department-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/ar/department-1-9999.geo.json"
     },
     {
         "country": "ARGENTINA",
@@ -41,11 +41,11 @@
         "level": null,
         "node_type_slug": "biome",
         "node_type_name": "Biome",
+        "year_start": 1,
+        "year_end": 9999,
         "regions_count": 15,
-        "endpoint_geojson": "ar/biome.geojson",
-        "endpoint_topojson": "ar/biome.topo.json",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/ar/biome.geojson",
-        "path_topojson": "https://resources.trase.earth/data/trase-regions/ar/biome.topo.json"
+        "endpoint_geojson": "ar/biome-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/ar/biome-1-9999.geo.json"
     },
     {
         "country": "BOLIVIA",
@@ -53,11 +53,11 @@
         "level": "1",
         "node_type_slug": "country",
         "node_type_name": "Country",
+        "year_start": 1,
+        "year_end": 9999,
         "regions_count": 1,
-        "endpoint_geojson": "bo/country.geojson",
-        "endpoint_topojson": "bo/country.topo.json",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/bo/country.geojson",
-        "path_topojson": "https://resources.trase.earth/data/trase-regions/bo/country.topo.json"
+        "endpoint_geojson": "bo/country-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/bo/country-1-9999.geo.json"
     },
     {
         "country": "BOLIVIA",
@@ -65,11 +65,11 @@
         "level": "2",
         "node_type_slug": "department",
         "node_type_name": "Department",
+        "year_start": 1,
+        "year_end": 9999,
         "regions_count": 9,
-        "endpoint_geojson": "bo/department.geojson",
-        "endpoint_topojson": "bo/department.topo.json",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/bo/department.geojson",
-        "path_topojson": "https://resources.trase.earth/data/trase-regions/bo/department.topo.json"
+        "endpoint_geojson": "bo/department-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/bo/department-1-9999.geo.json"
     },
     {
         "country": "BOLIVIA",
@@ -77,11 +77,11 @@
         "level": "3",
         "node_type_slug": "province",
         "node_type_name": "Province",
+        "year_start": 1,
+        "year_end": 9999,
         "regions_count": 112,
-        "endpoint_geojson": "bo/province.geojson",
-        "endpoint_topojson": "bo/province.topo.json",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/bo/province.geojson",
-        "path_topojson": "https://resources.trase.earth/data/trase-regions/bo/province.topo.json"
+        "endpoint_geojson": "bo/province-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/bo/province-1-9999.geo.json"
     },
     {
         "country": "BOLIVIA",
@@ -89,11 +89,11 @@
         "level": "4",
         "node_type_slug": "municipality",
         "node_type_name": "Municipality",
+        "year_start": 1,
+        "year_end": 9999,
         "regions_count": 339,
-        "endpoint_geojson": "bo/municipality.geojson",
-        "endpoint_topojson": "bo/municipality.topo.json",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/bo/municipality.geojson",
-        "path_topojson": "https://resources.trase.earth/data/trase-regions/bo/municipality.topo.json"
+        "endpoint_geojson": "bo/municipality-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/bo/municipality-1-9999.geo.json"
     },
     {
         "country": "BRAZIL",
@@ -101,11 +101,11 @@
         "level": "1",
         "node_type_slug": "country",
         "node_type_name": "Country",
+        "year_start": 1,
+        "year_end": 9999,
         "regions_count": 1,
-        "endpoint_geojson": "br/country.geojson",
-        "endpoint_topojson": "br/country.topo.json",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/br/country.geojson",
-        "path_topojson": "https://resources.trase.earth/data/trase-regions/br/country.topo.json"
+        "endpoint_geojson": "br/country-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/br/country-1-9999.geo.json"
     },
     {
         "country": "BRAZIL",
@@ -113,11 +113,11 @@
         "level": "2",
         "node_type_slug": "region",
         "node_type_name": "Region",
+        "year_start": 1,
+        "year_end": 9999,
         "regions_count": 5,
-        "endpoint_geojson": "br/region.geojson",
-        "endpoint_topojson": "br/region.topo.json",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/br/region.geojson",
-        "path_topojson": "https://resources.trase.earth/data/trase-regions/br/region.topo.json"
+        "endpoint_geojson": "br/region-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/br/region-1-9999.geo.json"
     },
     {
         "country": "BRAZIL",
@@ -125,11 +125,11 @@
         "level": "3",
         "node_type_slug": "state",
         "node_type_name": "State",
+        "year_start": 1,
+        "year_end": 9999,
         "regions_count": 27,
-        "endpoint_geojson": "br/state.geojson",
-        "endpoint_topojson": "br/state.topo.json",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/br/state.geojson",
-        "path_topojson": "https://resources.trase.earth/data/trase-regions/br/state.topo.json"
+        "endpoint_geojson": "br/state-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/br/state-1-9999.geo.json"
     },
     {
         "country": "BRAZIL",
@@ -137,11 +137,11 @@
         "level": "4",
         "node_type_slug": "mesoregion",
         "node_type_name": "Mesoregion",
+        "year_start": 1,
+        "year_end": 9999,
         "regions_count": 137,
-        "endpoint_geojson": "br/mesoregion.geojson",
-        "endpoint_topojson": "br/mesoregion.topo.json",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/br/mesoregion.geojson",
-        "path_topojson": "https://resources.trase.earth/data/trase-regions/br/mesoregion.topo.json"
+        "endpoint_geojson": "br/mesoregion-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/br/mesoregion-1-9999.geo.json"
     },
     {
         "country": "BRAZIL",
@@ -149,11 +149,11 @@
         "level": "5",
         "node_type_slug": "microregion",
         "node_type_name": "Microregion",
+        "year_start": 1,
+        "year_end": 9999,
         "regions_count": 558,
-        "endpoint_geojson": "br/microregion.geojson",
-        "endpoint_topojson": "br/microregion.topo.json",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/br/microregion.geojson",
-        "path_topojson": "https://resources.trase.earth/data/trase-regions/br/microregion.topo.json"
+        "endpoint_geojson": "br/microregion-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/br/microregion-1-9999.geo.json"
     },
     {
         "country": "BRAZIL",
@@ -161,11 +161,11 @@
         "level": "6",
         "node_type_slug": "municipality",
         "node_type_name": "Municipality",
+        "year_start": 1,
+        "year_end": 9999,
         "regions_count": 5570,
-        "endpoint_geojson": "br/municipality.geojson",
-        "endpoint_topojson": "br/municipality.topo.json",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/br/municipality.geojson",
-        "path_topojson": "https://resources.trase.earth/data/trase-regions/br/municipality.topo.json"
+        "endpoint_geojson": "br/municipality-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/br/municipality-1-9999.geo.json"
     },
     {
         "country": "BRAZIL",
@@ -173,11 +173,11 @@
         "level": null,
         "node_type_slug": "biome",
         "node_type_name": "Biome",
+        "year_start": 1,
+        "year_end": 9999,
         "regions_count": 6,
-        "endpoint_geojson": "br/biome.geojson",
-        "endpoint_topojson": "br/biome.topo.json",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/br/biome.geojson",
-        "path_topojson": "https://resources.trase.earth/data/trase-regions/br/biome.topo.json"
+        "endpoint_geojson": "br/biome-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/br/biome-1-9999.geo.json"
     },
     {
         "country": "BRAZIL",
@@ -185,23 +185,11 @@
         "level": null,
         "node_type_slug": "port",
         "node_type_name": "Port",
+        "year_start": 1,
+        "year_end": 9999,
         "regions_count": 29,
-        "endpoint_geojson": "wp/port.geojson",
-        "endpoint_topojson": "wp/port.topo.json",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/wp/port.geojson",
-        "path_topojson": "https://resources.trase.earth/data/trase-regions/wp/port.topo.json"
-    },
-    {
-        "country": "BRAZIL",
-        "country_code": null,
-        "level": null,
-        "node_type_slug": "port",
-        "node_type_name": "Port",
-        "regions_count": 128,
-        "endpoint_geojson": null,
-        "endpoint_topojson": null,
-        "path_geojson": null,
-        "path_topojson": null
+        "endpoint_geojson": "wp/port-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/wp/port-1-9999.geo.json"
     },
     {
         "country": "COLOMBIA",
@@ -209,11 +197,11 @@
         "level": "1",
         "node_type_slug": "country",
         "node_type_name": "Country",
+        "year_start": 1,
+        "year_end": 9999,
         "regions_count": 1,
-        "endpoint_geojson": "co/country.geojson",
-        "endpoint_topojson": "co/country.topo.json",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/co/country.geojson",
-        "path_topojson": "https://resources.trase.earth/data/trase-regions/co/country.topo.json"
+        "endpoint_geojson": "co/country-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/co/country-1-9999.geo.json"
     },
     {
         "country": "COLOMBIA",
@@ -221,11 +209,11 @@
         "level": "2",
         "node_type_slug": "department",
         "node_type_name": "Department",
+        "year_start": 1,
+        "year_end": 9999,
         "regions_count": 33,
-        "endpoint_geojson": "co/department.geojson",
-        "endpoint_topojson": "co/department.topo.json",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/co/department.geojson",
-        "path_topojson": "https://resources.trase.earth/data/trase-regions/co/department.topo.json"
+        "endpoint_geojson": "co/department-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/co/department-1-9999.geo.json"
     },
     {
         "country": "COLOMBIA",
@@ -233,11 +221,11 @@
         "level": "3",
         "node_type_slug": "municipality",
         "node_type_name": "Municipality",
+        "year_start": 1,
+        "year_end": 9999,
         "regions_count": 1122,
-        "endpoint_geojson": "co/municipality.geojson",
-        "endpoint_topojson": "co/municipality.topo.json",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/co/municipality.geojson",
-        "path_topojson": "https://resources.trase.earth/data/trase-regions/co/municipality.topo.json"
+        "endpoint_geojson": "co/municipality-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/co/municipality-1-9999.geo.json"
     },
     {
         "country": "COLOMBIA",
@@ -245,23 +233,11 @@
         "level": null,
         "node_type_slug": "port",
         "node_type_name": "Port",
+        "year_start": 1,
+        "year_end": 9999,
         "regions_count": 3,
-        "endpoint_geojson": "wp/port.geojson",
-        "endpoint_topojson": "wp/port.topo.json",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/wp/port.geojson",
-        "path_topojson": "https://resources.trase.earth/data/trase-regions/wp/port.topo.json"
-    },
-    {
-        "country": "COLOMBIA",
-        "country_code": null,
-        "level": null,
-        "node_type_slug": "port",
-        "node_type_name": "Port",
-        "regions_count": 7,
-        "endpoint_geojson": null,
-        "endpoint_topojson": null,
-        "path_geojson": null,
-        "path_topojson": null
+        "endpoint_geojson": "wp/port-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/wp/port-1-9999.geo.json"
     },
     {
         "country": "COTE D'IVOIRE",
@@ -269,11 +245,11 @@
         "level": "1",
         "node_type_slug": "country",
         "node_type_name": "Country",
+        "year_start": 1,
+        "year_end": 9999,
         "regions_count": 1,
-        "endpoint_geojson": "ci/country.geojson",
-        "endpoint_topojson": "ci/country.topo.json",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/ci/country.geojson",
-        "path_topojson": "https://resources.trase.earth/data/trase-regions/ci/country.topo.json"
+        "endpoint_geojson": "ci/country-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/ci/country-1-9999.geo.json"
     },
     {
         "country": "COTE D'IVOIRE",
@@ -281,11 +257,11 @@
         "level": "2",
         "node_type_slug": "district",
         "node_type_name": "District",
+        "year_start": 1,
+        "year_end": 9999,
         "regions_count": 14,
-        "endpoint_geojson": "ci/district.geojson",
-        "endpoint_topojson": "ci/district.topo.json",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/ci/district.geojson",
-        "path_topojson": "https://resources.trase.earth/data/trase-regions/ci/district.topo.json"
+        "endpoint_geojson": "ci/district-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/ci/district-1-9999.geo.json"
     },
     {
         "country": "COTE D'IVOIRE",
@@ -293,11 +269,11 @@
         "level": "3",
         "node_type_slug": "region",
         "node_type_name": "Region",
+        "year_start": 1,
+        "year_end": 9999,
         "regions_count": 33,
-        "endpoint_geojson": "ci/region.geojson",
-        "endpoint_topojson": "ci/region.topo.json",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/ci/region.geojson",
-        "path_topojson": "https://resources.trase.earth/data/trase-regions/ci/region.topo.json"
+        "endpoint_geojson": "ci/region-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/ci/region-1-9999.geo.json"
     },
     {
         "country": "COTE D'IVOIRE",
@@ -305,11 +281,11 @@
         "level": "4",
         "node_type_slug": "department",
         "node_type_name": "Department",
+        "year_start": 1,
+        "year_end": 9999,
         "regions_count": 108,
-        "endpoint_geojson": "ci/department.geojson",
-        "endpoint_topojson": "ci/department.topo.json",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/ci/department.geojson",
-        "path_topojson": "https://resources.trase.earth/data/trase-regions/ci/department.topo.json"
+        "endpoint_geojson": "ci/department-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/ci/department-1-9999.geo.json"
     },
     {
         "country": "ECUADOR",
@@ -317,11 +293,11 @@
         "level": "1",
         "node_type_slug": "country",
         "node_type_name": "Country",
+        "year_start": 1,
+        "year_end": 9999,
         "regions_count": 1,
-        "endpoint_geojson": "ec/country.geojson",
-        "endpoint_topojson": "ec/country.topo.json",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/ec/country.geojson",
-        "path_topojson": "https://resources.trase.earth/data/trase-regions/ec/country.topo.json"
+        "endpoint_geojson": "ec/country-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/ec/country-1-9999.geo.json"
     },
     {
         "country": "ECUADOR",
@@ -329,11 +305,11 @@
         "level": "2",
         "node_type_slug": "province",
         "node_type_name": "Province",
+        "year_start": 1,
+        "year_end": 9999,
         "regions_count": 25,
-        "endpoint_geojson": "ec/province.geojson",
-        "endpoint_topojson": "ec/province.topo.json",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/ec/province.geojson",
-        "path_topojson": "https://resources.trase.earth/data/trase-regions/ec/province.topo.json"
+        "endpoint_geojson": "ec/province-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/ec/province-1-9999.geo.json"
     },
     {
         "country": "ECUADOR",
@@ -341,11 +317,11 @@
         "level": "3",
         "node_type_slug": "canton",
         "node_type_name": "Canton",
+        "year_start": 1,
+        "year_end": 9999,
         "regions_count": 224,
-        "endpoint_geojson": "ec/canton.geojson",
-        "endpoint_topojson": "ec/canton.topo.json",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/ec/canton.geojson",
-        "path_topojson": "https://resources.trase.earth/data/trase-regions/ec/canton.topo.json"
+        "endpoint_geojson": "ec/canton-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/ec/canton-1-9999.geo.json"
     },
     {
         "country": "ECUADOR",
@@ -353,11 +329,11 @@
         "level": "4",
         "node_type_slug": "parish",
         "node_type_name": "Parish",
+        "year_start": 1,
+        "year_end": 9999,
         "regions_count": 1040,
-        "endpoint_geojson": "ec/parish.geojson",
-        "endpoint_topojson": "ec/parish.topo.json",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/ec/parish.geojson",
-        "path_topojson": "https://resources.trase.earth/data/trase-regions/ec/parish.topo.json"
+        "endpoint_geojson": "ec/parish-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/ec/parish-1-9999.geo.json"
     },
     {
         "country": "GHANA",
@@ -365,11 +341,11 @@
         "level": "1",
         "node_type_slug": "country",
         "node_type_name": "Country",
+        "year_start": 1,
+        "year_end": 9999,
         "regions_count": 1,
-        "endpoint_geojson": "gh/country.geojson",
-        "endpoint_topojson": "gh/country.topo.json",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/gh/country.geojson",
-        "path_topojson": "https://resources.trase.earth/data/trase-regions/gh/country.topo.json"
+        "endpoint_geojson": "gh/country-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/gh/country-1-9999.geo.json"
     },
     {
         "country": "GHANA",
@@ -377,11 +353,11 @@
         "level": "2",
         "node_type_slug": "region",
         "node_type_name": "Region",
+        "year_start": 1,
+        "year_end": 9999,
         "regions_count": 16,
-        "endpoint_geojson": "gh/region.geojson",
-        "endpoint_topojson": "gh/region.topo.json",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/gh/region.geojson",
-        "path_topojson": "https://resources.trase.earth/data/trase-regions/gh/region.topo.json"
+        "endpoint_geojson": "gh/region-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/gh/region-1-9999.geo.json"
     },
     {
         "country": "GHANA",
@@ -389,11 +365,11 @@
         "level": "3",
         "node_type_slug": "district",
         "node_type_name": "District",
+        "year_start": 1,
+        "year_end": 9999,
         "regions_count": 260,
-        "endpoint_geojson": "gh/district.geojson",
-        "endpoint_topojson": "gh/district.topo.json",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/gh/district.geojson",
-        "path_topojson": "https://resources.trase.earth/data/trase-regions/gh/district.topo.json"
+        "endpoint_geojson": "gh/district-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/gh/district-1-9999.geo.json"
     },
     {
         "country": "INDIA",
@@ -401,23 +377,11 @@
         "level": null,
         "node_type_slug": "port",
         "node_type_name": "Port",
+        "year_start": 1,
+        "year_end": 9999,
         "regions_count": 4,
-        "endpoint_geojson": "wp/port.geojson",
-        "endpoint_topojson": "wp/port.topo.json",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/wp/port.geojson",
-        "path_topojson": "https://resources.trase.earth/data/trase-regions/wp/port.topo.json"
-    },
-    {
-        "country": "INDIA",
-        "country_code": null,
-        "level": null,
-        "node_type_slug": "port",
-        "node_type_name": "Port",
-        "regions_count": 41,
-        "endpoint_geojson": null,
-        "endpoint_topojson": null,
-        "path_geojson": null,
-        "path_topojson": null
+        "endpoint_geojson": "wp/port-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/wp/port-1-9999.geo.json"
     },
     {
         "country": "INDONESIA",
@@ -425,11 +389,11 @@
         "level": "1",
         "node_type_slug": "country",
         "node_type_name": "Country",
+        "year_start": 1,
+        "year_end": 9999,
         "regions_count": 1,
-        "endpoint_geojson": "id/country.geojson",
-        "endpoint_topojson": "id/country.topo.json",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/id/country.geojson",
-        "path_topojson": "https://resources.trase.earth/data/trase-regions/id/country.topo.json"
+        "endpoint_geojson": "id/country-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/id/country-1-9999.geo.json"
     },
     {
         "country": "INDONESIA",
@@ -437,11 +401,11 @@
         "level": "3",
         "node_type_slug": "province",
         "node_type_name": "Province",
+        "year_start": 1,
+        "year_end": 9999,
         "regions_count": 38,
-        "endpoint_geojson": "id/province.geojson",
-        "endpoint_topojson": "id/province.topo.json",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/id/province.geojson",
-        "path_topojson": "https://resources.trase.earth/data/trase-regions/id/province.topo.json"
+        "endpoint_geojson": "id/province-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/id/province-1-9999.geo.json"
     },
     {
         "country": "INDONESIA",
@@ -449,11 +413,11 @@
         "level": "4",
         "node_type_slug": "kabupaten",
         "node_type_name": "Kabupaten",
+        "year_start": 1,
+        "year_end": 9999,
         "regions_count": 514,
-        "endpoint_geojson": "id/kabupaten.geojson",
-        "endpoint_topojson": "id/kabupaten.topo.json",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/id/kabupaten.geojson",
-        "path_topojson": "https://resources.trase.earth/data/trase-regions/id/kabupaten.topo.json"
+        "endpoint_geojson": "id/kabupaten-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/id/kabupaten-1-9999.geo.json"
     },
     {
         "country": "INDONESIA",
@@ -461,11 +425,11 @@
         "level": null,
         "node_type_slug": "palm-oil-concession",
         "node_type_name": "Palm oil concession",
+        "year_start": 1,
+        "year_end": 9999,
         "regions_count": 11891,
-        "endpoint_geojson": "id/palm-oil-concession.geojson",
-        "endpoint_topojson": "id/palm-oil-concession.topo.json",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/id/palm-oil-concession.geojson",
-        "path_topojson": "https://resources.trase.earth/data/trase-regions/id/palm-oil-concession.topo.json"
+        "endpoint_geojson": "id/palm-oil-concession-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/id/palm-oil-concession-1-9999.geo.json"
     },
     {
         "country": "INDONESIA",
@@ -473,11 +437,11 @@
         "level": null,
         "node_type_slug": "port",
         "node_type_name": "Port",
+        "year_start": 1,
+        "year_end": 9999,
         "regions_count": 159,
-        "endpoint_geojson": "id/port.geojson",
-        "endpoint_topojson": "id/port.topo.json",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/id/port.geojson",
-        "path_topojson": "https://resources.trase.earth/data/trase-regions/id/port.topo.json"
+        "endpoint_geojson": "id/port-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/id/port-1-9999.geo.json"
     },
     {
         "country": "INDONESIA",
@@ -485,23 +449,35 @@
         "level": null,
         "node_type_slug": "wood-pulp-concession",
         "node_type_name": "Wood pulp concession",
-        "regions_count": 325,
-        "endpoint_geojson": "id/wood-pulp-concession.geojson",
-        "endpoint_topojson": "id/wood-pulp-concession.topo.json",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/id/wood-pulp-concession.geojson",
-        "path_topojson": "https://resources.trase.earth/data/trase-regions/id/wood-pulp-concession.topo.json"
+        "year_start": 1,
+        "year_end": 2019,
+        "regions_count": 301,
+        "endpoint_geojson": "id/wood-pulp-concession-1-2019.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/id/wood-pulp-concession-1-2019.geo.json"
     },
     {
         "country": "INDONESIA",
-        "country_code": null,
+        "country_code": "ID",
         "level": null,
-        "node_type_slug": "port",
-        "node_type_name": "Port",
-        "regions_count": 2,
-        "endpoint_geojson": null,
-        "endpoint_topojson": null,
-        "path_geojson": null,
-        "path_topojson": null
+        "node_type_slug": "wood-pulp-concession",
+        "node_type_name": "Wood pulp concession",
+        "year_start": 2020,
+        "year_end": 2022,
+        "regions_count": 306,
+        "endpoint_geojson": "id/wood-pulp-concession-2020-2022.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/id/wood-pulp-concession-2020-2022.geo.json"
+    },
+    {
+        "country": "INDONESIA",
+        "country_code": "ID",
+        "level": null,
+        "node_type_slug": "wood-pulp-concession",
+        "node_type_name": "Wood pulp concession",
+        "year_start": 2023,
+        "year_end": 9999,
+        "regions_count": 298,
+        "endpoint_geojson": "id/wood-pulp-concession-2023-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/id/wood-pulp-concession-2023-9999.geo.json"
     },
     {
         "country": "PARAGUAY",
@@ -509,11 +485,11 @@
         "level": "1",
         "node_type_slug": "country",
         "node_type_name": "Country",
+        "year_start": 1,
+        "year_end": 9999,
         "regions_count": 1,
-        "endpoint_geojson": "py/country.geojson",
-        "endpoint_topojson": "py/country.topo.json",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/py/country.geojson",
-        "path_topojson": "https://resources.trase.earth/data/trase-regions/py/country.topo.json"
+        "endpoint_geojson": "py/country-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/py/country-1-9999.geo.json"
     },
     {
         "country": "PARAGUAY",
@@ -521,11 +497,11 @@
         "level": "2",
         "node_type_slug": "department",
         "node_type_name": "Department",
+        "year_start": 1,
+        "year_end": 9999,
         "regions_count": 18,
-        "endpoint_geojson": "py/department.geojson",
-        "endpoint_topojson": "py/department.topo.json",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/py/department.geojson",
-        "path_topojson": "https://resources.trase.earth/data/trase-regions/py/department.topo.json"
+        "endpoint_geojson": "py/department-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/py/department-1-9999.geo.json"
     },
     {
         "country": "PARAGUAY",
@@ -533,11 +509,11 @@
         "level": "3",
         "node_type_slug": "district",
         "node_type_name": "District",
+        "year_start": 1,
+        "year_end": 9999,
         "regions_count": 255,
-        "endpoint_geojson": "py/district.geojson",
-        "endpoint_topojson": "py/district.topo.json",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/py/district.geojson",
-        "path_topojson": "https://resources.trase.earth/data/trase-regions/py/district.topo.json"
+        "endpoint_geojson": "py/district-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/py/district-1-9999.geo.json"
     },
     {
         "country": "PARAGUAY",
@@ -545,11 +521,11 @@
         "level": null,
         "node_type_slug": "biome",
         "node_type_name": "Biome",
+        "year_start": 1,
+        "year_end": 9999,
         "regions_count": 5,
-        "endpoint_geojson": "py/biome.geojson",
-        "endpoint_topojson": "py/biome.topo.json",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/py/biome.geojson",
-        "path_topojson": "https://resources.trase.earth/data/trase-regions/py/biome.topo.json"
+        "endpoint_geojson": "py/biome-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/py/biome-1-9999.geo.json"
     },
     {
         "country": "PERU",
@@ -557,11 +533,11 @@
         "level": "1",
         "node_type_slug": "country",
         "node_type_name": "Country",
+        "year_start": 1,
+        "year_end": 9999,
         "regions_count": 1,
-        "endpoint_geojson": "pe/country.geojson",
-        "endpoint_topojson": "pe/country.topo.json",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/pe/country.geojson",
-        "path_topojson": "https://resources.trase.earth/data/trase-regions/pe/country.topo.json"
+        "endpoint_geojson": "pe/country-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/pe/country-1-9999.geo.json"
     },
     {
         "country": "PERU",
@@ -569,23 +545,11 @@
         "level": null,
         "node_type_slug": "port",
         "node_type_name": "Port",
+        "year_start": 1,
+        "year_end": 9999,
         "regions_count": 3,
-        "endpoint_geojson": "wp/port.geojson",
-        "endpoint_topojson": "wp/port.topo.json",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/wp/port.geojson",
-        "path_topojson": "https://resources.trase.earth/data/trase-regions/wp/port.topo.json"
-    },
-    {
-        "country": "PERU",
-        "country_code": null,
-        "level": null,
-        "node_type_slug": "port",
-        "node_type_name": "Port",
-        "regions_count": 5,
-        "endpoint_geojson": null,
-        "endpoint_topojson": null,
-        "path_geojson": null,
-        "path_topojson": null
+        "endpoint_geojson": "wp/port-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/wp/port-1-9999.geo.json"
     },
     {
         "country": "TANZANIA",
@@ -593,22 +557,10 @@
         "level": null,
         "node_type_slug": "port",
         "node_type_name": "Port",
+        "year_start": 1,
+        "year_end": 9999,
         "regions_count": 2,
-        "endpoint_geojson": "wp/port.geojson",
-        "endpoint_topojson": "wp/port.topo.json",
-        "path_geojson": "https://resources.trase.earth/data/trase-regions/wp/port.geojson",
-        "path_topojson": "https://resources.trase.earth/data/trase-regions/wp/port.topo.json"
-    },
-    {
-        "country": "TANZANIA",
-        "country_code": null,
-        "level": null,
-        "node_type_slug": "port",
-        "node_type_name": "Port",
-        "regions_count": 9,
-        "endpoint_geojson": null,
-        "endpoint_topojson": null,
-        "path_geojson": null,
-        "path_topojson": null
+        "endpoint_geojson": "wp/port-1-9999.geo.json",
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/wp/port-1-9999.geo.json"
     }
 ]

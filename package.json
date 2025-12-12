@@ -1,7 +1,7 @@
 {
   "name": "trase-regions",
   "version": "1.0.0",
-  "description": "This is a script that extracts spatial and attribute data from the Trase db and saves it to geojson and topojson, for easier consumption by front-end clients such as dashboards.",
+  "description": "This is a script that extracts spatial and attribute data from the Trase db and saves it to geojson, for easier consumption by front-end clients such as dashboards.",
   "main": "index.js",
   "directories": {
     "test": "tests"
