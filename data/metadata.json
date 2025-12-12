@@ -9,7 +9,7 @@
         "year_end": 9999,
         "regions_count": 1,
         "endpoint_geojson": "ar/country-1-9999.geo.json",
-        "path_geojson": "https://resouoperces.trase.earth/data/trase-regions/ar/country-1-9999.geo.json"
+        "path_geojson": "https://resources.trase.earth/data/trase-regions/ar/country-1-9999.geo.json"
     },
     {
         "country": "ARGENTINA",
