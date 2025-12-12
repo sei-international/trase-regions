@@ -79,5 +79,5 @@ const simplifyGeometriesIfTooLarge = async (filePath, format, extension) => {
 const geojsonFiles = findFilesByExtension(".geo.json");
 
 geojsonFiles.forEach((filePath) =>
-  simplifyGeometriesIfTooLarge(filePath, "geojson", ".geo.json")
+  simplifyGeometriesIfTooLarge(filePath, "geojson", ".json")
 );
