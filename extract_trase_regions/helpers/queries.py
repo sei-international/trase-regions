@@ -97,8 +97,8 @@ create_ranges AS (
         r.country,
         TRUNC(r.level)::VARCHAR AS level,
         r.{LEVEL_COL},
-        p.name AS parent_name,
-        p.{LEVEL_NAME_COL} AS parent_{LEVEL_NAME_COL},
+        r.parent_name,
+        r.parent_{LEVEL_NAME_COL},
         r.{GEOMETRY_COL} AS geometry
     FROM create_ranges AS cr
     JOIN views.regions AS r
@@ -107,13 +107,6 @@ create_ranges AS (
         AND r.node_type_slug = cr.node_type_slug
         AND COALESCE(r.year_start, 1)::INTEGER <= cr.slice_start
         AND COALESCE(r.year_end, {max_year - 1})::INTEGER >= cr.slice_end
-    LEFT JOIN views.regions AS p
-        ON p.trase_id =
-        CASE
-            -- HACK: force Brazil to use states as parent region
-            WHEN r.country = 'BRAZIL' AND r.{LEVEL_COL} = 'municipality' THEN LEFT(r.trase_id, 5)
-            ELSE r.parent_trase_id
-        END
 )
 """
 
